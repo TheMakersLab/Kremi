@@ -180,6 +180,10 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 .matcha-tin-visual{display:flex;justify-content:center;align-items:center;}
 .matcha-tin-row{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:nowrap;}
 .matcha-tin-arrow{display:flex;flex-direction:column;align-items:center;gap:0.35rem;padding-bottom:2.4rem;}
+@media(max-width:640px){
+  .matcha-tin-row > div:first-child > div:first-child,
+  .matcha-tin-row > div:last-child > div:first-child{width:150px !important;height:190px !important;}
+}
 @media(max-width:480px){
   .matcha-tin-row{gap:0.8rem;}
   .matcha-tin-row > div:first-child > div:first-child,
@@ -538,12 +542,11 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 .turnstile-controls{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-top:2rem;}
 .tc-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(90,122,74,0.3);background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);transition:all 0.2s;}
 .tc-btn:hover{background:var(--matcha);border-color:var(--matcha);color:white;transform:scale(1.08);}
-.tc-pause{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(90,122,74,0.3);background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);transition:all 0.2s;}
-.tc-pause:hover,.tc-pause.paused{background:var(--red);border-color:var(--red);color:white;}
+
 .tc-dots{display:flex;gap:0.45rem;align-items:center;}
 .tc-dot{width:6px;height:6px;border-radius:50%;background:rgba(90,122,74,0.22);cursor:pointer;transition:all 0.3s;}
 .tc-dot.on{width:18px;border-radius:3px;background:var(--matcha);}
-.turnstile-hint{text-align:center;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--matcha);opacity:0.6;margin-top:0.9rem;}
+
 @media(max-width:640px){
   .turnstile-stage{height:420px;perspective:900px;}
   .tcard{width:230px;height:320px;}
@@ -610,12 +613,11 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 .turnstile-controls{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-top:2rem;}
 .t-btn{width:46px;height:46px;border-radius:50%;border:2px solid rgba(90,122,74,0.3);background:white;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;color:var(--ink-soft);}
 .t-btn:hover{background:var(--matcha);border-color:var(--matcha);color:white;transform:scale(1.08);}
-.t-pause{width:46px;height:46px;border-radius:50%;border:2px solid rgba(90,122,74,0.3);background:white;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;color:var(--ink-soft);}
-.t-pause:hover,.t-pause.paused{background:var(--red);border-color:var(--red);color:white;}
+
 .t-dots{display:flex;gap:0.45rem;align-items:center;}
 .t-dot{width:6px;height:6px;border-radius:50%;background:rgba(90,122,74,0.22);transition:all 0.3s;cursor:pointer;border:none;padding:0;}
 .t-dot.active{width:18px;border-radius:3px;background:var(--matcha);}
-.t-hint{text-align:center;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--matcha);opacity:0.6;margin-top:0.9rem;font-weight:500;}
+
 @media(max-width:640px){.turnstile-stage{height:400px;perspective:800px;}.turnstile-track{width:230px;height:320px;}}
 </style>
 </head>
@@ -718,14 +720,11 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
       <div class="tc-dots" id="tDots"></div>
-      <button class="tc-pause" id="tPauseBtn" onclick="tTogglePause()" aria-label="Pause/Play">
-        <svg id="tPauseIcon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-      </button>
       <button class="tc-btn" onclick="tStep(1)" aria-label="Next">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
     </div>
-    <p class="turnstile-hint">Swipe or drag to browse · Auto-rotates every 5s</p>
+
   </div>
     <div class="menu-feat">
     <div class="feat-item reveal"><div class="feat-icon green">🌿</div><div class="feat-body"><h4>Made Fresh to Order</h4><p>Every crepe is made when you order — batter hits the griddle, fillings layered with care, delivered warm and soft every time.</p></div></div>
@@ -782,7 +781,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
         <!-- Tin -->
         <div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem;">
-          <div style="width:160px;height:200px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:220px;height:280px;display:flex;align-items:center;justify-content:center;">
             <img src="kremimatchatin.png" alt="Kremi Shizuoka Matcha Tin"
               style="max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 16px 32px rgba(0,0,0,0.4));transition:transform 0.4s;"
               onmouseover="this.style.transform='scale(1.06) rotate(-3deg)'"
@@ -805,7 +804,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
         <!-- Latte -->
         <div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem;">
-          <div style="width:160px;height:200px;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.45);border:2px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;">
+          <div style="width:220px;height:280px;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.45);border:2px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;">
             <img src="kremi_s_matcha_latte.png" alt="Kremi Matcha Latte"
               style="width:100%;height:100%;object-fit:contain;transition:transform 0.45s;"
               onmouseover="this.style.transform='scale(1.07)'"
@@ -1306,6 +1305,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   </div>
   <div class="footer-bottom">
     <span class="footer-copy">© 2025 Kremi Singapore. All rights reserved.</span>
+    <span style="font-size:0.72rem;color:rgba(255,255,255,0.25);">Website Designed by TheMakersLab</span>
     <span class="footer-jp">手作りクレープ</span>
   </div>
 </footer>
@@ -1410,18 +1410,8 @@ function tRender(){
 
 function tStep(dir){tCur=(tCur+dir+tN)%tN;tRender();tResetAuto();}
 function tGoTo(idx){tCur=idx;tRender();tResetAuto();}
-function tTogglePause(){
-  tPaused=!tPaused;
-  var btn=document.getElementById('tPauseBtn');
-  var icon=document.getElementById('tPauseIcon');
-  btn.classList.toggle('paused',tPaused);
-  icon.innerHTML=tPaused
-    ?'<polygon points="5 3 19 12 5 21 5 3"/>'
-    :'<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
-  if(tPaused){clearInterval(tTimer);}else{tStartAuto();}
-}
-function tStartAuto(){clearInterval(tTimer);if(!tPaused)tTimer=setInterval(function(){tStep(1);},5000);}
-function tResetAuto(){if(!tPaused){clearInterval(tTimer);tStartAuto();}}
+function tStartAuto(){clearTimeout(tTimer);if(!tPaused)tTimer=setTimeout(function(){tStep(1);tStartAuto();},5000);}
+function tResetAuto(){if(!tPaused){clearTimeout(tTimer);tStartAuto();}}
 
 function tAttachSwipe(){
   var stage=document.getElementById('tStage');
