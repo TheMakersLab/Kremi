@@ -177,7 +177,21 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   .matcha-top-grid{gap:2rem;}
   .matcha-section{padding:4rem 1.5rem !important;}
 }
-.menu-illus { background: #faf6ef; display:flex; align-items:center; justify-content:center; }
+.matcha-tin-visual{display:flex;justify-content:center;align-items:center;}
+.matcha-tin-row{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:nowrap;}
+.matcha-tin-arrow{display:flex;flex-direction:column;align-items:center;gap:0.35rem;padding-bottom:2.4rem;}
+@media(max-width:480px){
+  .matcha-tin-row{gap:0.8rem;}
+  .matcha-tin-row > div:first-child > div:first-child,
+  .matcha-tin-row > div:last-child > div:first-child{width:120px !important;height:150px !important;}
+}
+@media(max-width:380px){
+  .matcha-tin-row{gap:0.5rem;}
+  .matcha-tin-row > div:first-child > div:first-child,
+  .matcha-tin-row > div:last-child > div:first-child{width:100px !important;height:125px !important;}
+  .matcha-tin-arrow{display:none;}
+}
+
 .menu-illus img { width:80%; height:100%; object-fit:contain; padding:0.5rem 0; transition:transform 0.5s; }
 .menu-item:hover .menu-illus img { transform:scale(1.06) translateY(-4px); }
 .tab-btn { background:none; border:1.5px solid rgba(90,122,74,0.3); color:var(--ink-soft); padding:0.55rem 1.4rem; border-radius:100px; font-size:0.78rem; font-weight:500; letter-spacing:0.1em; cursor:pointer; transition:all 0.2s; font-family:'DM Sans',sans-serif; }
@@ -431,20 +445,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 .success-title{font-family:'Shippori Mincho',serif;font-size:1.4rem;font-weight:700;color:var(--matcha);}
 .success-msg{font-size:0.88rem;color:var(--ink-soft);line-height:1.6;font-weight:300;max-width:320px;}
 
-/* ── FAQ ── */
-.faq-section{padding:7rem 6rem;background:var(--warm-white);}
-.faq-inner{max-width:860px;margin:0 auto;}
-.faq-header{text-align:center;margin-bottom:4rem;}
-.faq-header .section-label{justify-content:center;}
-.faq-item{border-bottom:1px solid rgba(0,0,0,0.08);overflow:hidden;}
-.faq-q{width:100%;text-align:left;background:none;border:none;padding:1.5rem 0;display:flex;align-items:center;justify-content:space-between;font-family:'Shippori Mincho',serif;font-size:1rem;font-weight:700;color:var(--ink);cursor:pointer;gap:1rem;transition:color 0.2s;}
-.faq-q:hover{color:var(--matcha);}
-.faq-arrow{width:28px;height:28px;border-radius:50%;background:var(--matcha-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s;}
-.faq-item.open .faq-arrow{background:var(--matcha);}
-.faq-item.open .faq-arrow svg{transform:rotate(180deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
-.faq-a-inner{padding:0 0 1.5rem;font-size:0.88rem;color:var(--ink-soft);line-height:1.8;font-weight:300;}
-.faq-item.open .faq-a{max-height:400px;}
+
 
 /* ── CTA BAND ── */
 .cta-band{background:var(--red);padding:5rem 6rem;text-align:center;position:relative;overflow:hidden;}
@@ -467,7 +468,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   .events-hero{padding:8rem 2.5rem 5rem;}
   .events-divider{padding:5rem 2.5rem;grid-template-columns:1fr;}
   .events-divider::before{font-size:10rem;}
-  .event-types,.how-section,.past-events,.enquiry-section,.faq-section,.cta-band,.ev-testimonials{padding:5rem 2.5rem;}
+  .event-types,.how-section,.past-events,.enquiry-section,.cta-band,.ev-testimonials{padding:5rem 2.5rem;}
   .event-types-grid{grid-template-columns:1fr 1fr;}
   .how-steps{grid-template-columns:1fr 1fr;gap:2rem;}
   .how-steps::before{display:none;}
@@ -487,7 +488,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   .events-divider::before{display:none;}
   .events-divider-actions{flex-direction:column;align-items:flex-start;gap:1rem;}
   .ev-div-badge{padding:1rem 1.2rem;}
-  .event-types,.how-section,.past-events,.enquiry-section,.faq-section,.cta-band,.ev-testimonials{padding:4rem 1.5rem;}
+  .event-types,.how-section,.past-events,.enquiry-section,.cta-band,.ev-testimonials{padding:4rem 1.5rem;}
   .event-types-grid{grid-template-columns:1fr;}
   .past-events-grid{grid-template-columns:1fr;}
   .ev-photo-card img{height:300px;}
@@ -775,13 +776,13 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
         <span class="matcha-pill">Freshly Whisked</span>
       </div>
     </div>
-    <div class="reveal d2" style="display:flex;justify-content:center;align-items:center;">
+    <div class="reveal d2 matcha-tin-visual">
       <!-- Tin → Latte visual connection -->
-      <div style="display:flex;align-items:flex-end;justify-content:center;gap:2rem;">
+      <div class="matcha-tin-row">
 
         <!-- Tin -->
         <div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem;">
-          <div style="width:200px;height:240px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:160px;height:200px;display:flex;align-items:center;justify-content:center;">
             <img src="kremimatchatin.png" alt="Kremi Shizuoka Matcha Tin"
               style="max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 16px 32px rgba(0,0,0,0.4));transition:transform 0.4s;"
               onmouseover="this.style.transform='scale(1.06) rotate(-3deg)'"
@@ -793,7 +794,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
         </div>
 
         <!-- Arrow -->
-        <div style="display:flex;flex-direction:column;align-items:center;gap:0.35rem;padding-bottom:2.4rem;">
+        <div class="matcha-tin-arrow">
           <span style="font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:600;white-space:nowrap;">crafted into</span>
           <div style="display:flex;align-items:center;gap:0.1rem;">
             <div style="width:32px;height:1.5px;background:linear-gradient(to right,rgba(255,255,255,0.2),rgba(255,255,255,0.7));border-radius:2px;"></div>
@@ -804,7 +805,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
         <!-- Latte -->
         <div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem;">
-          <div style="width:200px;height:240px;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.45);border:2px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;">
+          <div style="width:160px;height:200px;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.45);border:2px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;">
             <img src="kremi_s_matcha_latte.png" alt="Kremi Matcha Latte"
               style="width:100%;height:100%;object-fit:contain;transition:transform 0.45s;"
               onmouseover="this.style.transform='scale(1.07)'"
@@ -987,7 +988,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
     <p class="section-body">Look for our signature retro-red kiosk on Level 2. You'll smell it before you see it.</p>
     <div class="visit-detail"><div class="visit-icon">📍</div><div class="visit-text"><h4>Location</h4><p>2 Orchard Link, #02-32, *SCAPE<br>Singapore 237978</p></div></div>
     <div class="visit-detail"><div class="visit-icon">🚇</div><div class="visit-text"><h4>Getting Here</h4><p>~10 minute walk from Orchard MRT Station.<br>Take the underpass via 313 Somerset.</p></div></div>
-    <div class="visit-detail"><div class="visit-icon">📞</div><div class="visit-text"><h4>Contact</h4><p>+65 8913 3833<br><a href="mailto:kremicollective@gmail.com">kremicollective@gmail.com</a></p></div></div>
+    <div class="visit-detail"><div class="visit-icon">✉️</div><div class="visit-text"><h4>Contact</h4><p><a href="mailto:kremicollective@gmail.com">kremicollective@gmail.com</a></p></div></div>
     <div class="social-row">
       <a href="https://www.instagram.com/kremi.sg/" target="_blank" class="social-btn ig">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -1047,7 +1048,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
     <!-- Event 2: Christmas Crepe Live Station -->
     <div class="ev-photo-card d2">
-      <img src="eventchristmascrepe.png" alt="Kremi live crepe station at Christmas event" style="object-position:center 20%;">
+      <img src="eventchristmascrepe.jpg" alt="Kremi live crepe station at Christmas event" style="object-position:center 20%;">
       <div class="ev-overlay">
         <div class="ev-overlay-label">Christmas · Crepe Live Station</div>
         <div class="ev-overlay-title">Festive Crepe Station — fresh strawberry crepes made to order</div>
@@ -1056,7 +1057,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
     <!-- Event 3: Corporate Matcha Live Station -->
     <div class="ev-photo-card d3">
-      <img src="eventmatchacorporate.png" alt="Kremi matcha live station at corporate event" style="object-position:center top;">
+      <img src="eventmatchacorporate.jpg" alt="Kremi matcha live station at corporate event" style="object-position:center top;">
       <div class="ev-overlay">
         <div class="ev-overlay-label">Corporate · Matcha Live Station</div>
         <div class="ev-overlay-title">Office Matcha Bar — guests queue for freshly whisked ceremonial matcha</div>
@@ -1247,55 +1248,21 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
         </div>
 
         <button class="form-submit" onclick="submitForm()">Send Enquiry →</button>
-        <p class="form-note">We'll reply within 2 business days. You can also WhatsApp us at <strong>+65 8913 3833</strong>.</p>
+        <p class="form-note">We'll reply within 2 business days.</p>
       </div>
 
       <div class="form-success" id="formSuccess">
         <div class="success-icon">📬</div>
         <div class="success-title">Almost there!</div>
         <p class="success-msg">Your enquiry details have been filled into your mail app — <strong>please press Send</strong> to complete your submission to Kremi.</p>
-        <p class="success-msg" style="margin-top:0.8rem;padding:0.8rem 1rem;background:var(--matcha-wash);border-radius:10px;border-left:3px solid var(--matcha);">If your mail app didn't open, reach us at <a href="mailto:kremicollective@gmail.com" style="color:var(--matcha);font-weight:600;">kremicollective@gmail.com</a> or WhatsApp <strong>+65 8913 3833</strong>.</p>
+        <p class="success-msg" style="margin-top:0.8rem;padding:0.8rem 1rem;background:var(--matcha-wash);border-radius:10px;border-left:3px solid var(--matcha);">If your mail app didn't open, reach us at <a href="mailto:kremicollective@gmail.com" style="color:var(--matcha);font-weight:600;">kremicollective@gmail.com</a>.</p>
       </div>
     </div><!-- end formWrapper -->
     </div><!-- end reveal -->
   </div><!-- end enquiry-inner -->
 </section>
 
-<!-- FAQ -->
-<section class="faq-section">
-  <div class="faq-inner">
-    <div class="faq-header reveal">
-      <p class="section-label">FAQ</p>
-      <h2 class="section-title">Common questions</h2>
-    </div>
-    <div class="reveal">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">How far in advance should I book?<span class="faq-arrow"><svg viewBox="0 0 12 8" fill="none" width="12" height="8"><path d="M1 1l5 5 5-5" stroke="#5a7a4a" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">We recommend booking at least 7 days in advance for smaller events, and 2–3 weeks for larger events or pop-ups. For peak periods like school holidays, December, or Chinese New Year, the earlier the better.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Do you travel to different parts of Singapore?<span class="faq-arrow"><svg viewBox="0 0 12 8" fill="none" width="12" height="8"><path d="M1 1l5 5 5-5" stroke="#5a7a4a" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes! We serve island-wide. A travel surcharge may apply depending on your venue. Please indicate your location in the enquiry form and we'll factor it into the quote we send you.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Can I choose specific crepe flavours for my event?<span class="faq-arrow"><svg viewBox="0 0 12 8" fill="none" width="12" height="8"><path d="M1 1l5 5 5-5" stroke="#5a7a4a" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Absolutely. You can choose from our existing menu, mix sweet and savoury options, or discuss something more custom with us. We're happy to tailor the selection to your event theme or guest preferences.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">What space and power do you need?<span class="faq-arrow"><svg viewBox="0 0 12 8" fill="none" width="12" height="8"><path d="M1 1l5 5 5-5" stroke="#5a7a4a" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">We typically need a 2×2 metre space and access to a standard 13A power socket. For outdoor events, let us know in advance and we'll discuss options. Full logistics will be confirmed when we follow up on your enquiry.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Can you accommodate dietary requirements?<span class="faq-arrow"><svg viewBox="0 0 12 8" fill="none" width="12" height="8"><path d="M1 1l5 5 5-5" stroke="#5a7a4a" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">We'll do our best. Please list any dietary needs in the enquiry form — we can discuss what's possible and suggest suitable flavours from our menu. Note that Kremi is currently not halal-certified.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">How do I confirm a booking?<span class="faq-arrow"><svg viewBox="0 0 12 8" fill="none" width="12" height="8"><path d="M1 1l5 5 5-5" stroke="#5a7a4a" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">After we've discussed your event and agreed on the details, a deposit will be required to lock in your date. Payment terms will be shared when we follow up. We accept PayNow and bank transfer.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- CTA BAND -->
 <section class="cta-band">
@@ -1303,7 +1270,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   <p>Send us an enquiry and let's plan something beautiful together — one crepe at a time.</p>
   <div class="cta-band-actions">
     <a href="#enquiry" class="btn-white">Send an Enquiry</a>
-    <a href="https://wa.me/6589133833" target="_blank" class="btn-ghost-white">WhatsApp Us</a>
+    <a href="mailto:kremicollective@gmail.com" class="btn-ghost-white">Email Us</a>
   </div>
 </section>
 
@@ -1464,14 +1431,6 @@ function tAttachSwipe(){
   stage.addEventListener('mousedown',function(e){tDragX=e.clientX;tDragging=true;e.preventDefault();});
   window.addEventListener('mousemove',function(e){if(tDragging)tDelta=e.clientX-tDragX;});
   window.addEventListener('mouseup',function(){if(tDragging&&Math.abs(tDelta)>45)tStep(tDelta<0?1:-1);tDragging=false;tDelta=0;});
-}
-
-/* ── FAQ ── */
-function toggleFaq(btn){
-  var item=btn.parentElement;
-  var isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
-  if(!isOpen)item.classList.add('open');
 }
 
 /* ── Phone validation ── */
