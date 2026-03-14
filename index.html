@@ -211,26 +211,21 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 .menu-item.hidden { display:none; }
 
 /* ── Hamburger nav ── */
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:101;position:relative;}
-.nav-hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:all 0.3s;}
-nav.scrolled .nav-hamburger span{background:var(--ink);}
-.nav-hamburger.open span{background:var(--ink);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.3s;}
 .nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .nav-hamburger.open span:nth-child(2){opacity:0;}
 .nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
-.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(250,246,239,0.98);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);z-index:100;flex-direction:column;align-items:center;justify-content:center;gap:2rem;padding:2rem;}
+.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(250,246,239,0.98);backdrop-filter:blur(16px);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
 .nav-mobile.open{display:flex;}
-.nav-mobile-close{position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;cursor:pointer;padding:8px;display:flex;flex-direction:column;gap:5px;}
-.nav-mobile-close span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;}
-.nav-mobile-close span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
-.nav-mobile-close span:nth-child(2){transform:rotate(-45deg) translate(-0px,0px);}
-.nav-mobile a{font-size:1.3rem;font-family:'Shippori Mincho',serif;color:var(--ink);text-decoration:none;font-weight:700;letter-spacing:0.05em;transition:color 0.2s;text-align:center;}
+.nav-mobile a{font-size:1.4rem;font-family:'Shippori Mincho',serif;color:var(--ink);text-decoration:none;font-weight:700;letter-spacing:0.05em;transition:color 0.2s;}
 .nav-mobile a:hover{color:var(--red);}
-.nav-mobile .nav-cta{background:var(--red);color:white !important;padding:0.8rem 2.2rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:0.9rem;margin-top:0.5rem;}
+.nav-mobile .nav-cta{background:var(--red);color:white !important;padding:0.8rem 2.2rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:0.9rem;}
 
 /* ── Tablet (≤1024px) ── */
 @media(max-width:1024px){
-  nav{padding:1rem 1.5rem;}
+  nav{padding:0.75rem 1.2rem;}
+  .nav-logo img{width:130px;height:auto;}
   .nav-links{display:none;}
   .nav-hamburger{display:flex;z-index:101;position:relative;}
 
@@ -257,6 +252,7 @@ nav.scrolled .nav-hamburger span{background:var(--ink);}
 
 /* ── Mobile (≤640px) ── */
 @media(max-width:640px){
+  .nav-logo img{width:100px;height:auto;}
   .hero{display:flex;flex-direction:column;}
   .hero-left{padding:5.5rem 1.5rem 2rem;order:1;}
   .hero-right{order:2;height:380px;min-height:380px;display:flex;align-items:center;justify-content:center;}
@@ -668,7 +664,6 @@ nav.scrolled .nav-hamburger span{background:var(--ink);}
   </button>
 </nav>
 <div class="nav-mobile" id="mobileNav">
-  <button class="nav-mobile-close" id="mobileNavClose" aria-label="Close menu"><span></span><span></span></button>
   <a href="#menu" class="mobile-link">Menu</a>
   <a href="#matcha" class="mobile-link">Matcha</a>
   <a href="#story" class="mobile-link">Our Story</a>
@@ -970,7 +965,7 @@ nav.scrolled .nav-hamburger span{background:var(--ink);}
 <!-- ═══ LOCATION ═══ -->
 <section class="visit-section" id="visit">
   <div class="map-card reveal">
-    <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7981543596616!2d103.83139231475355!3d1.2988199990636178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a8a3512c15%3A0xbd54f847a8e01c51!2s*SCAPE!5e0!3m2!1sen!2ssg!4v1700000000000!5m2!1sen!2ssg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kremi at *SCAPE, 2 Orchard Link Singapore"></iframe>
+    <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.798!2d103.83106!3d1.29882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a8a3512c15%3A0xbd54f847a8e01c51!2s*SCAPE%2C%202%20Orchard%20Link%2C%20Singapore%20237978!5e0!3m2!1sen!2ssg!4v1710000000000!5m2!1sen!2ssg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kremi at *SCAPE, 2 Orchard Link Singapore"></iframe>
     <div class="map-info">
       <div class="map-address">2 Orchard Link, #02-32, *SCAPE</div>
       <div class="map-sub">Singapore 237978 · ~10 min walk from Orchard MRT</div>
@@ -1465,17 +1460,9 @@ function submitForm(){
 document.addEventListener('DOMContentLoaded',function(){
   var hamburger=document.getElementById('hamburger');
   var mobileNav=document.getElementById('mobileNav');
-  var closeBtn=document.getElementById('mobileNavClose');
-  function closeMenu(){hamburger.classList.remove('open');mobileNav.classList.remove('open');}
-  function openMenu(){hamburger.classList.add('open');mobileNav.classList.add('open');}
   if(hamburger&&mobileNav){
-    hamburger.addEventListener('click',function(){
-      if(mobileNav.classList.contains('open')){closeMenu();}else{openMenu();}
-    });
-    if(closeBtn){closeBtn.addEventListener('click',closeMenu);}
-    mobileNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
-    /* Close on outside tap */
-    mobileNav.addEventListener('click',function(e){if(e.target===mobileNav)closeMenu();});
+    hamburger.addEventListener('click',function(){hamburger.classList.toggle('open');mobileNav.classList.toggle('open');});
+    mobileNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hamburger.classList.remove('open');mobileNav.classList.remove('open');});});
   }
 });
 </script>
