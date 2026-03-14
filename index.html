@@ -3,26 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kremi — Japanese Crepes &amp; Matcha · Singapore</title>
+<title>Kremi — Japanese Crepes & Matcha · Singapore</title>
+<meta name="description" content="Handcrafted Japanese crepes and ceremonial-grade matcha at *SCAPE Orchard, Singapore. Sweet & savoury crepe cones made fresh to order. Available for private events, weddings, and corporate bookings.">
+<meta property="og:title" content="Kremi — Japanese Crepes & Matcha · Singapore">
+<meta property="og:description" content="Handcrafted Japanese crepes and ceremonial-grade matcha at *SCAPE Orchard, Singapore. Made fresh to order.">
+<meta property="og:image" content="kremi_logo_red.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
 :root{--matcha:#5a7a4a;--matcha-light:#8aaa6a;--matcha-pale:#d4e5c4;--matcha-wash:#f0f5ea;--red:#c8392b;--red-warm:#d4504a;--cream:#faf6ef;--warm-white:#fffdf8;--ink:#1a1714;--ink-soft:#3d3530;--blush:#f0d5c8;--honey:#f5c97a;--honey-pale:#fdf3dc;--peach:#f9e4d4;--sage:#e8f0e2;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--ink);overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:background 0.4s;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3.5rem;display:flex;align-items:center;justify-content:space-between;transition:background 0.4s;}
 nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(90,122,74,0.15);}
-.nav-logo{font-family:'Shippori Mincho',serif;font-size:1.6rem;font-weight:700;color:var(--red);letter-spacing:0.06em;text-decoration:none;}
-.nav-logo span{color:var(--matcha);font-size:0.7rem;display:block;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;font-weight:300;margin-top:-4px;}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}
+.nav-logo img{width:250px;height:225px;object-fit:contain;object-position:left center;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.15));}
+nav.scrolled .nav-logo img{filter:brightness(0) saturate(100%) invert(22%) sepia(68%) saturate(800%) hue-rotate(333deg) brightness(90%) contrast(95%);}
 .nav-links{display:flex;gap:2.5rem;list-style:none;}
 .nav-links a{font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;font-weight:500;transition:color 0.2s;}
 .nav-links a:hover{color:var(--red);}
 .nav-cta{background:var(--red);color:white !important;padding:0.55rem 1.4rem;border-radius:100px;}
 .nav-cta:hover{background:var(--red-warm) !important;}
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;}
-.hero-left{background:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 6rem 6rem;}
+.hero-left{background:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:13rem 4rem 6rem 6rem;}
 .hero-eyebrow{font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--matcha);font-weight:500;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.8rem;}
 .hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--matcha);display:block;}
 .hero-title{font-family:'Shippori Mincho',serif;font-size:clamp(3rem,5.5vw,5rem);line-height:1.05;font-weight:700;color:var(--ink);margin-bottom:0.3rem;}
@@ -237,9 +245,6 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
   .visit-section{grid-template-columns:1fr;padding:5rem 2.5rem;gap:3rem;max-width:100%;}
 
-  section[id="reviews"]{padding:6rem 2.5rem !important;}
-  section[id="reviews"] > div:nth-child(2){grid-template-columns:repeat(2,1fr) !important;}
-
   footer{padding:4rem 2.5rem 2rem;}
   .footer-top{grid-template-columns:1fr 1fr;gap:2.5rem;}
 }
@@ -277,9 +282,6 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   .section-title{font-size:1.9rem;}
 
   .visit-section{padding:4rem 1.5rem;gap:2.5rem;}
-
-  section[id="reviews"]{padding:4rem 1.5rem !important;}
-  section[id="reviews"] > div:nth-child(2){grid-template-columns:1fr !important;}
 
   footer{padding:3rem 1.5rem 2rem;}
   .footer-top{grid-template-columns:1fr;gap:2rem;}
@@ -449,8 +451,6 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 .success-title{font-family:'Shippori Mincho',serif;font-size:1.4rem;font-weight:700;color:var(--matcha);}
 .success-msg{font-size:0.88rem;color:var(--ink-soft);line-height:1.6;font-weight:300;max-width:320px;}
 
-
-
 /* ── CTA BAND ── */
 .cta-band{background:var(--red);padding:5rem 6rem;text-align:center;position:relative;overflow:hidden;}
 .cta-band::before{content:'✦';position:absolute;font-size:12rem;color:rgba(255,255,255,0.04);top:50%;left:5%;transform:translateY(-50%);pointer-events:none;}
@@ -463,7 +463,6 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 .btn-ghost-white{color:white;text-decoration:none;font-size:0.85rem;font-weight:500;display:flex;align-items:center;gap:0.4rem;opacity:0.85;transition:opacity 0.2s;}
 .btn-ghost-white:hover{opacity:1;}
 .btn-ghost-white::after{content:'→';}
-
 
 @media(max-width:1024px){
   nav{padding:1rem 1.5rem;}
@@ -556,7 +555,6 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   .tcard[data-pos="-2"]{transform:translateX(-290px) translateZ(-190px) scale(0.55);opacity:0.18;}
 }
 
-
 .menu-modal-overlay{position:fixed;inset:0;background:rgba(26,23,20,0.85);backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity 0.35s ease;}
 .menu-modal-overlay.open{opacity:1;pointer-events:all;}
 .menu-modal{background:var(--cream);border-radius:20px;width:100%;max-width:900px;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.35);transform:translateY(24px) scale(0.97);transition:transform 0.35s cubic-bezier(0.23,1,0.32,1);}
@@ -589,7 +587,6 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   .menu-modal-body iframe{min-height:50vh;}
 }
 
-
 /* ── Pour dots animation ── */
 .pour-dots{display:flex;gap:3px;align-items:center;margin-top:4px;}
 .pour-dots span{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.7);animation:pourFall 1.2s ease-in-out infinite;}
@@ -619,11 +616,39 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 .t-dot.active{width:18px;border-radius:3px;background:var(--matcha);}
 
 @media(max-width:640px){.turnstile-stage{height:400px;perspective:800px;}.turnstile-track{width:230px;height:320px;}}
+
+/* ── Reviews section ── */
+.reviews-section{background:var(--cream);padding:8rem 6rem;}
+.reviews-header{text-align:center;max-width:600px;margin:0 auto 4rem;}
+.reviews-header .section-label{justify-content:center;}
+.reviews-score{display:flex;justify-content:center;align-items:center;gap:0.8rem;margin-top:1rem;}
+.reviews-score-num{font-family:'Shippori Mincho',serif;font-size:2.5rem;font-weight:700;color:var(--ink);}
+.reviews-stars{color:#f5a623;font-size:1.2rem;letter-spacing:2px;}
+.reviews-source{font-size:0.75rem;color:var(--ink-soft);letter-spacing:0.1em;}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1300px;margin:0 auto;}
+.review-card{background:white;border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;}
+.review-stars{color:#f5a623;font-size:0.95rem;letter-spacing:2px;}
+.review-text{font-size:0.88rem;line-height:1.75;color:var(--ink-soft);font-weight:300;flex:1;}
+.review-author{display:flex;align-items:center;gap:0.8rem;padding-top:0.8rem;border-top:1px solid rgba(0,0,0,0.06);}
+.review-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;flex-shrink:0;}
+.review-name{font-weight:600;font-size:0.85rem;color:var(--ink);}
+.review-meta{font-size:0.72rem;color:var(--ink-soft);}
+@media(max-width:1024px){.reviews-section{padding:6rem 2.5rem !important;}.reviews-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.reviews-section{padding:4rem 1.5rem !important;}.reviews-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
+<!-- Reusable SVG symbols -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="icon-google" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+  </symbol>
+</svg>
 <nav id="nav">
-  <a href="#" class="nav-logo">Kremi<span>クレミ · Japanese Crepes</span></a>
+  <a href="#" class="nav-logo"><img src="kremi_logo_white_removebg.png" alt="Kremi"></a>
   <ul class="nav-links">
     <li><a href="#menu">Menu</a></li>
     <li><a href="#matcha">Matcha</a></li>
@@ -649,13 +674,13 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
 <section class="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Japanese Crepes · Singapore</p>
+    <p class="hero-eyebrow">Made to order · Singapore</p>
     <h1 class="hero-title">Hand&shy;crafted<br><span class="accent">Crepes</span><br>from Japan's<br>heart</h1>
     <p class="hero-jp">クレープと抹茶の専門店</p>
     <p class="hero-desc">Delicately made Japanese crepes and ceremonial-grade matcha — inspired by the streets of Japan, made fresh for you in Singapore.</p>
     <div class="hero-actions">
       <a href="#menu" class="btn-primary">Explore the Menu</a>
-      <a href="#visit" class="btn-ghost">Find Us at *SCAPE</a>
+      <a href="#visit" class="btn-ghost">Find Us at *SCAPE #02-32</a>
     </div>
     <div class="hero-badges">
       <div class="badge"><span class="badge-num">$9.90</span><span class="badge-label">Starting from</span></div>
@@ -755,7 +780,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
       <button id="tabDrinks" onclick="switchMenuTab('drinks')" style="padding:0.8rem 1.4rem;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;color:var(--ink-soft);font-family:'DM Sans',sans-serif;">🍵 Drinks Menu</button>
     </div>
     <div class="menu-modal-body">
-      <img id="menuImgView" src="KrēmiCrepeMenu.png" alt="Kremi Menu" style="width:100%;height:auto;display:block;">
+      <img id="menuImgView" loading="lazy" src="KrēmiCrepeMenu.png" alt="Kremi Menu" style="width:100%;height:auto;display:block;">
     </div>
   </div>
 </div>
@@ -765,47 +790,15 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   <!-- Top: copy + matcha tin -->
   <div class="matcha-top-grid">
     <div class="matcha-content reveal">
-      <p class="section-label">Matcha Drinks</p>
+      <p class="section-label">Matcha Latte</p>
       <h2 class="section-title">Shizuoka<br>Ceremonial<br>Matcha</h2>
-      <p class="section-body">Our matcha is sourced directly from Shizuoka, Japan — ceremonial grade, vibrantly green, smooth and vegetal with a grassy edge that's far from bitter.</p>
+      <p class="section-body">Premium first harvest matcha, cold whisked for a bright, silky cup with vibrant colour, gentle umami sweetness and a smooth refreshing finish.</p>
       <p class="section-body">Freshly whisked and served with care. Because a great crepe deserves a great drink beside it.</p>
-      <div class="matcha-pills">
-        <span class="matcha-pill">Ceremonial Grade</span>
-        <span class="matcha-pill">Sourced from Shizuoka 🇯🇵</span>
-        <span class="matcha-pill">Freshly Whisked</span>
-      </div>
     </div>
-    <div class="reveal d2 matcha-tin-visual">
-      <!-- Tin → Latte visual connection -->
-      <div class="matcha-tin-row">
-
-        <!-- Tin -->
-        <div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem;">
-          <div style="width:220px;height:280px;display:flex;align-items:center;justify-content:center;">
-            <img src="kremimatchatin.png" alt="Kremi Shizuoka Matcha Tin"
-              style="max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 16px 32px rgba(0,0,0,0.4));transition:transform 0.4s;"
-              onmouseover="this.style.transform='scale(1.06) rotate(-3deg)'"
-              onmouseout="this.style.transform=''">
-          </div>
-          <div style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:100px;padding:0.28rem 0.9rem;display:inline-block;">
-            <span style="font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:white;font-weight:600;">Shizuoka Matcha</span>
-          </div>
-        </div>
-
-        <!-- Arrow -->
-        <div class="matcha-tin-arrow">
-          <span style="font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:600;white-space:nowrap;">crafted into</span>
-          <div style="display:flex;align-items:center;gap:0.1rem;">
-            <div style="width:32px;height:1.5px;background:linear-gradient(to right,rgba(255,255,255,0.2),rgba(255,255,255,0.7));border-radius:2px;"></div>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          </div>
-          <div class="pour-dots"><span></span><span></span><span></span></div>
-        </div>
-
-        <!-- Latte -->
+    <!-- Latte -->
         <div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem;">
           <div style="width:220px;height:280px;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.45);border:2px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;">
-            <img src="kremi_s_matcha_latte.png" alt="Kremi Matcha Latte"
+            <img loading="lazy" src="kremi_s_matcha_latte.png" alt="Kremi Matcha Latte"
               style="width:100%;height:100%;object-fit:contain;transition:transform 0.45s;"
               onmouseover="this.style.transform='scale(1.07)'"
               onmouseout="this.style.transform=''">
@@ -814,9 +807,6 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
             <span style="font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:white;font-weight:600;">Kremi Matcha Latte</span>
           </div>
         </div>
-
-      </div>
-    </div>
   </div>
 
   <!-- Full drink menu: 4 columns -->
@@ -877,8 +867,8 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
 <section class="story" id="story">
   <div class="story-visual reveal">
-    <div class="story-img-main"><img src="https://hungrygowhere.com/wp-content/uploads/2026/01/21-KREMI-KREMIs-founders-Sng-Ler-Jun-HungryGoWhere.jpg" alt="Lia and Tessa, founders of Kremi"></div>
-    <div class="story-img-accent"><img src="https://hungrygowhere.com/wp-content/uploads/2026/01/03-KREMI-Founders-behind-the-kiosk-helping-each-other-with-the-crepe-at-KREMI-SNG-LER-JUN-HungryGoWhere.jpg" alt="Lia and Tessa making crepes"></div>
+    <div class="story-img-main"><img src="boss1&2first.jpg" alt="boss1&2first" loading="lazy"></div>
+    <div class="story-img-accent"><img src="boss1&2second.jpg" alt="boss1&2second" loading="lazy"></div>
     <div class="story-stamp"><span class="story-stamp-jp">旅</span><span class="story-stamp-en">born of travel</span></div>
     <div class="founders-label"><span class="founder-name">Lia Lim &amp; Tessa Foo</span><span class="founder-title">Co-founders, Kremi</span></div>
   </div>
@@ -892,78 +882,78 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   </div>
 </section>
 
-<section style="background:var(--cream);padding:8rem 6rem;" id="reviews">
-  <div style="text-align:center;max-width:600px;margin:0 auto 4rem;" class="reveal">
-    <p class="section-label" style="justify-content:center;">Google Reviews</p>
+<section class="reviews-section" id="reviews">
+  <div class="reviews-header reveal">
+    <p class="section-label">Google Reviews</p>
     <h2 class="section-title">What people<br>are saying</h2>
-    <div style="display:flex;justify-content:center;align-items:center;gap:0.8rem;margin-top:1rem;">
-      <div style="font-family:'Shippori Mincho',serif;font-size:2.5rem;font-weight:700;color:var(--ink);">5.0</div>
+    <div class="reviews-score">
+      <div class="reviews-score-num">5.0</div>
       <div>
-        <div style="color:#f5a623;font-size:1.2rem;letter-spacing:2px;">★★★★★</div>
-        <div style="font-size:0.75rem;color:var(--ink-soft);letter-spacing:0.1em;">on Google Maps</div>
+        <div class="reviews-stars">★★★★★</div>
+        <div class="reviews-source">on Google Maps</div>
       </div>
     </div>
   </div>
 
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1300px;margin:0 auto;" class="reveal">
+  <div class="reviews-grid reveal">
 
-    <div style="background:white;border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;">
-      <div style="color:#f5a623;font-size:0.95rem;letter-spacing:2px;">★★★★★</div>
-      <p style="font-size:0.88rem;line-height:1.75;color:var(--ink-soft);font-weight:300;flex:1;">"Yummy crepes and matcha!! Got the strawberry matcha crepe that was so gao and yummy, not gelat at all!! Love the shop design too super aesthetic and many nice photospots!! Love their matcha and can't wait to try their other crepes next time!"</p>
-      <div style="display:flex;align-items:center;gap:0.8rem;padding-top:0.8rem;border-top:1px solid rgba(0,0,0,0.06);">
-        <div style="width:36px;height:36px;border-radius:50%;background:var(--matcha);display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;flex-shrink:0;">C</div>
-        <div><div style="font-weight:600;font-size:0.85rem;color:var(--ink);">calzburps</div><div style="font-size:0.72rem;color:var(--ink-soft);">Local Guide · 2 months ago</div></div>
-        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Yummy crepes and matcha!! Got the strawberry matcha crepe that was so gao and yummy, not gelat at all!! Love the shop design too super aesthetic and many nice photospots!! Love their matcha and can't wait to try their other crepes next time!"</p>
+      <div class="review-author">
+        <div class="review-avatar" style="background:var(--matcha);">C</div>
+        <div><div class="review-name">calzburps</div><div class="review-meta">Local Guide · 2 months ago</div></div>
+        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" aria-label="Google review"><use href="#icon-google"/></svg>
       </div>
     </div>
 
-    <div style="background:white;border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;">
-      <div style="color:#f5a623;font-size:0.95rem;letter-spacing:2px;">★★★★★</div>
-      <p style="font-size:0.88rem;line-height:1.75;color:var(--ink-soft);font-weight:300;flex:1;">"Rich matcha latte (from $7.50) — bigger than normal cup! Sweet &amp; savory crepes (from $9.90) are recommended to share, even 3 pax potentially cos they are generous with the filling. Support youth passion!"</p>
-      <div style="display:flex;align-items:center;gap:0.8rem;padding-top:0.8rem;border-top:1px solid rgba(0,0,0,0.06);">
-        <div style="width:36px;height:36px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;flex-shrink:0;">N</div>
-        <div><div style="font-weight:600;font-size:0.85rem;color:var(--ink);">Nomninjas</div><div style="font-size:0.72rem;color:var(--ink-soft);">Local Guide · 1 month ago</div></div>
-        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Rich matcha latte (from $7.50) — bigger than normal cup! Sweet &amp; savory crepes (from $9.90) are recommended to share, even 3 pax potentially cos they are generous with the filling. Support youth passion!"</p>
+      <div class="review-author">
+        <div class="review-avatar" style="background:var(--red);">N</div>
+        <div><div class="review-name">Nomninjas</div><div class="review-meta">Local Guide · 1 month ago</div></div>
+        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" aria-label="Google review"><use href="#icon-google"/></svg>
       </div>
     </div>
 
-    <div style="background:white;border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;">
-      <div style="color:#f5a623;font-size:0.95rem;letter-spacing:2px;">★★★★★</div>
-      <p style="font-size:0.88rem;line-height:1.75;color:var(--ink-soft);font-weight:300;flex:1;">"The Banana Pudding Matcha Brûlée Crepe is so decadent — think banana pudding matcha in crepe form. HEAVY in the best way. Loved the creme brûlée top, the crunch contrasting the generous banana pudding. The matcha taste was quite pronounced in the crepe too, and not in a grassy way!"</p>
-      <div style="display:flex;align-items:center;gap:0.8rem;padding-top:0.8rem;border-top:1px solid rgba(0,0,0,0.06);">
-        <div style="width:36px;height:36px;border-radius:50%;background:#8aaa6a;display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;flex-shrink:0;">B</div>
-        <div><div style="font-weight:600;font-size:0.85rem;color:var(--ink);">Belle</div><div style="font-size:0.72rem;color:var(--ink-soft);">Local Guide · 1 month ago</div></div>
-        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"The Banana Pudding Matcha Brûlée Crepe is so decadent — think banana pudding matcha in crepe form. HEAVY in the best way. Loved the creme brûlée top, the crunch contrasting the generous banana pudding. The matcha taste was quite pronounced in the crepe too, and not in a grassy way!"</p>
+      <div class="review-author">
+        <div class="review-avatar" style="background:#8aaa6a;">B</div>
+        <div><div class="review-name">Belle</div><div class="review-meta">Local Guide · 1 month ago</div></div>
+        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" aria-label="Google review"><use href="#icon-google"/></svg>
       </div>
     </div>
 
-    <div style="background:white;border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;" class="reveal d1">
-      <div style="color:#f5a623;font-size:0.95rem;letter-spacing:2px;">★★★★★</div>
-      <p style="font-size:0.88rem;line-height:1.75;color:var(--ink-soft);font-weight:300;flex:1;">"Highly recommend their Banana Pudding Matcha Brûlée and Shizuoka Matcha Latte. Both were a perfect pairing — the crepe was filled with layers of indulgence: banana pudding, matcha cream &amp; cornflakes, while the matcha latte was creamy, smooth and rich. Will be back!"</p>
-      <div style="display:flex;align-items:center;gap:0.8rem;padding-top:0.8rem;border-top:1px solid rgba(0,0,0,0.06);">
-        <div style="width:36px;height:36px;border-radius:50%;background:#c8392b;display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;flex-shrink:0;">G</div>
-        <div><div style="font-weight:600;font-size:0.85rem;color:var(--ink);">Grace Chan</div><div style="font-size:0.72rem;color:var(--ink-soft);">Local Guide · 4 months ago</div></div>
-        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+    <div class="review-card reveal d1">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Highly recommend their Banana Pudding Matcha Brûlée and Shizuoka Matcha Latte. Both were a perfect pairing — the crepe was filled with layers of indulgence: banana pudding, matcha cream &amp; cornflakes, while the matcha latte was creamy, smooth and rich. Will be back!"</p>
+      <div class="review-author">
+        <div class="review-avatar" style="background:#c8392b;">G</div>
+        <div><div class="review-name">Grace Chan</div><div class="review-meta">Local Guide · 4 months ago</div></div>
+        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" aria-label="Google review"><use href="#icon-google"/></svg>
       </div>
     </div>
 
-    <div style="background:white;border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;" class="reveal d2">
-      <div style="color:#f5a623;font-size:0.95rem;letter-spacing:2px;">★★★★★</div>
-      <p style="font-size:0.88rem;line-height:1.75;color:var(--ink-soft);font-weight:300;flex:1;">"Finally got to try the crepe from Kremi! Ordered the mochi strawberry and was surprised by the size — it's huge!! The cream was very fresh and the strawberries were sweet. Would love to be back to try the other crepes!"</p>
-      <div style="display:flex;align-items:center;gap:0.8rem;padding-top:0.8rem;border-top:1px solid rgba(0,0,0,0.06);">
-        <div style="width:36px;height:36px;border-radius:50%;background:#5a7a4a;display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;flex-shrink:0;">C</div>
-        <div><div style="font-weight:600;font-size:0.85rem;color:var(--ink);">Chelsea L</div><div style="font-size:0.72rem;color:var(--ink-soft);">Local Guide · 2 months ago</div></div>
-        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+    <div class="review-card reveal d2">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Finally got to try the crepe from Kremi! Ordered the mochi strawberry and was surprised by the size — it's huge!! The cream was very fresh and the strawberries were sweet. Would love to be back to try the other crepes!"</p>
+      <div class="review-author">
+        <div class="review-avatar" style="background:#5a7a4a;">C</div>
+        <div><div class="review-name">Chelsea L</div><div class="review-meta">Local Guide · 2 months ago</div></div>
+        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" aria-label="Google review"><use href="#icon-google"/></svg>
       </div>
     </div>
 
-    <div style="background:white;border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;" class="reveal d3">
-      <div style="color:#f5a623;font-size:0.95rem;letter-spacing:2px;">★★★★★</div>
-      <p style="font-size:0.88rem;line-height:1.75;color:var(--ink-soft);font-weight:300;flex:1;">"Been a regular since their soft launch. The Strawberry Cream Cheese crepe is beautifully balanced — tangy cream cheese, sweet strawberry jam, rich yet refreshing. Paired with the Hisui Matcha Latte, smooth and aromatic with just the right bitterness. Generous with fillings every single time. They also have a loyalty card — free crepe every 6 purchased. Worth it for the Banana Pudding Matcha Brûlée alone. Even with 15–20 min wait, every crepe is made fresh to order and it shows."</p>
-      <div style="display:flex;align-items:center;gap:0.8rem;padding-top:0.8rem;border-top:1px solid rgba(0,0,0,0.06);">
-        <div style="width:36px;height:36px;border-radius:50%;background:#4a6a8a;display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;flex-shrink:0;">A</div>
-        <div><div style="font-weight:600;font-size:0.85rem;color:var(--ink);">Alson Tan</div><div style="font-size:0.72rem;color:var(--ink-soft);">1 review · 13 photos · 3 months ago</div></div>
-        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+    <div class="review-card reveal d3">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Been a regular since their soft launch. The Strawberry Cream Cheese crepe is beautifully balanced — tangy cream cheese, sweet strawberry jam, rich yet refreshing. Paired with the Hisui Matcha Latte, smooth and aromatic with just the right bitterness. Generous with fillings every single time. They also have a loyalty card — free crepe every 6 purchased. Worth it for the Banana Pudding Matcha Brûlée alone. Even with 15–20 min wait, every crepe is made fresh to order and it shows."</p>
+      <div class="review-author">
+        <div class="review-avatar" style="background:#4a6a8a;">A</div>
+        <div><div class="review-name">Alson Tan</div><div class="review-meta">1 review · 13 photos · 3 months ago</div></div>
+        <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" aria-label="Google review"><use href="#icon-google"/></svg>
       </div>
     </div>
 
@@ -973,7 +963,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 <!-- ═══ LOCATION ═══ -->
 <section class="visit-section" id="visit">
   <div class="map-card reveal">
-    <iframe class="map-embed" src="https://maps.google.com/maps?q=*SCAPE+2+Orchard+Link+Singapore+237978&output=embed&z=17" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kremi at *SCAPE"></iframe>
+    <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7954!2d103.8316!3d1.3010!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19b8a8b8f4e1%3A0x0!2s2+Orchard+Link+%23B1-01+%2ASCAPE+Singapore+237978!5e0!3m2!1sen!2ssg!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kremi at *SCAPE, 2 Orchard Link Singapore"></iframe>
     <div class="map-info">
       <div class="map-address">2 Orchard Link, #02-32, *SCAPE</div>
       <div class="map-sub">Singapore 237978 · ~10 min walk from Orchard MRT</div>
@@ -1001,7 +991,6 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   </div>
 </section>
 
-
 <!-- ═══ EVENTS DIVIDER ═══ -->
 <section class="events-divider" id="events">
   <div class="events-divider-content reveal">
@@ -1024,7 +1013,6 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   </div>
 </section>
 
-
 <!-- PAST EVENTS GALLERY -->
 <section class="past-events" id="past-events">
   <div class="past-events-header reveal">
@@ -1038,7 +1026,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
     <!-- Event 1: Wedding -->
     <div class="ev-photo-card d1">
-      <img src="eventwedding.jpg" alt="Kremi matcha live station at wedding" style="object-position:center top;">
+      <img loading="lazy" src="eventwedding.jpg" alt="Kremi matcha live station at wedding" style="object-position:center top;">
       <div class="ev-overlay">
         <div class="ev-overlay-label">Wedding · Matcha Live Station</div>
         <div class="ev-overlay-title">Bridal Matcha Bar — complimentary ceremonial matcha for wedding guests</div>
@@ -1047,7 +1035,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
     <!-- Event 2: Christmas Crepe Live Station -->
     <div class="ev-photo-card d2">
-      <img src="eventchristmascrepe.jpg" alt="Kremi live crepe station at Christmas event" style="object-position:center 20%;">
+      <img loading="lazy" src="eventchristmascrepe.jpg" alt="Kremi live crepe station at Christmas event" style="object-position:center 20%;">
       <div class="ev-overlay">
         <div class="ev-overlay-label">Christmas · Crepe Live Station</div>
         <div class="ev-overlay-title">Festive Crepe Station — fresh strawberry crepes made to order</div>
@@ -1056,7 +1044,7 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
 
     <!-- Event 3: Corporate Matcha Live Station -->
     <div class="ev-photo-card d3">
-      <img src="eventmatchacorporate.jpg" alt="Kremi matcha live station at corporate event" style="object-position:center top;">
+      <img loading="lazy" src="eventmatchacorporate.jpg" alt="Kremi matcha live station at corporate event" style="object-position:center top;">
       <div class="ev-overlay">
         <div class="ev-overlay-label">Corporate · Matcha Live Station</div>
         <div class="ev-overlay-title">Office Matcha Bar — guests queue for freshly whisked ceremonial matcha</div>
@@ -1261,8 +1249,6 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   </div><!-- end enquiry-inner -->
 </section>
 
-
-
 <!-- CTA BAND -->
 <section class="cta-band">
   <h2>Ready to make it happen?</h2>
@@ -1273,12 +1259,10 @@ body.js-ready .reveal.visible{opacity:1;transform:none;}
   </div>
 </section>
 
-
-
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-logo">Kremi</div>
+      <div class="footer-logo"><img src="kremi_logo_white_removebg.png" alt="Kremi" style="width:220px;height:auto;display:block;margin-bottom:0.5rem;"></div>
       <div class="footer-tagline">クレープと抹茶 · Japanese Crepes &amp; Matcha</div>
       <p class="footer-desc">Handcrafted Japanese crepes and ceremonial-grade matcha, inspired by the streets of Japan. Made fresh for you at *SCAPE, Singapore.</p>
     </div>
@@ -1470,10 +1454,15 @@ function submitForm(){
   setTimeout(function(){document.getElementById('formContent').style.display='none';document.getElementById('formSuccess').classList.add('show');document.getElementById('formWrapper').scrollIntoView({behavior:'smooth',block:'center'});},400);
 }
 
-var hamburger=document.getElementById('hamburger');
-var mobileNav=document.getElementById('mobileNav');
-hamburger.addEventListener('click',function(){hamburger.classList.toggle('open');mobileNav.classList.toggle('open');});
-mobileNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hamburger.classList.remove('open');mobileNav.classList.remove('open');});});
+/* ── Mobile nav ── */
+document.addEventListener('DOMContentLoaded',function(){
+  var hamburger=document.getElementById('hamburger');
+  var mobileNav=document.getElementById('mobileNav');
+  if(hamburger&&mobileNav){
+    hamburger.addEventListener('click',function(){hamburger.classList.toggle('open');mobileNav.classList.toggle('open');});
+    mobileNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hamburger.classList.remove('open');mobileNav.classList.remove('open');});});
+  }
+});
 </script>
 </body>
 </html>
