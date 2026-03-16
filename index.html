@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kremi — Japanese Crepes & Matcha · Singapore</title>
+<meta name="description" content="Handcrafted Japanese crepes and ceremonial-grade matcha at *SCAPE Orchard, Singapore. Sweet & savoury crepe cones made fresh to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--matcha:#5a7a4a;--matcha-light:#8aaa6a;--matcha-pale:#d4e5c4;--matcha-wash:#f0f5ea;--red:#c8392b;--red-warm:#d4504a;--cream:#faf6ef;--warm-white:#fffdf8;--ink:#1a1714;--ink-soft:#3d3530;--blush:#f0d5c8;--honey:#f5c97a;--honey-pale:#fdf3dc;--peach:#f9e4d4;--sage:#e8f0e2;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--ink);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3.5rem;display:flex;align-items:center;justify-content:space-between;transition:background 0.4s;}
+nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(90,122,74,0.15);}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}.nav-logo img{width:250px;height:80px;object-fit:contain;object-position:left center;display:block;filter:brightness(0) saturate(100%) invert(22%) sepia(68%) saturate(800%) hue-rotate(333deg) brightness(90%) contrast(95%);margin-left:1rem;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}.nav-links a{font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;font-weight:500;transition:color 0.2s;}.nav-links a:hover{color:var(--red);}
+.nav-cta{background:var(--red);color:white !important;padding:0.55rem 1.4rem;border-radius:100px;}.nav-cta:hover{background:var(--red-warm) !important;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}.nav-hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.3s;}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}.nav-hamburger.open span:nth-child(2){opacity:0;}.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(250,246,239,0.98);backdrop-filter:blur(16px);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.nav-mobile.open{display:flex;}.nav-mobile a{font-size:1.4rem;font-family:'Shippori Mincho',serif;color:var(--ink);text-decoration:none;font-weight:700;letter-spacing:0.05em;transition:color 0.2s;}.nav-mobile a:hover{color:var(--red);}
+.nav-mobile .nav-cta{background:var(--red);color:white !important;padding:0.8rem 2.2rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:0.9rem;}
+.section-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--matcha);font-weight:600;margin-bottom:1.2rem;display:flex;align-items:center;gap:0.7rem;}.section-label::before{content:'';width:24px;height:2px;background:var(--matcha);display:block;}
+.section-title{font-family:'Shippori Mincho',serif;font-size:clamp(2rem,3.5vw,3rem);line-height:1.2;font-weight:700;margin-bottom:1.5rem;color:var(--ink);}
+.section-body{font-size:1rem;line-height:1.85;color:var(--ink-soft);font-weight:300;margin-bottom:1.2rem;}
+.reveal{opacity:1;transform:none;transition:opacity 0.7s ease,transform 0.7s ease;}body.js-ready .reveal{opacity:0;transform:translateY(30px);}body.js-ready .reveal.visible{opacity:1;transform:none;}
+.d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}.d4{transition-delay:0.4s;}
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;}
+.hero-left{background:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:13rem 4rem 6rem 6rem;}
+.hero-eyebrow{font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--matcha);font-weight:500;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.8rem;}.hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--matcha);display:block;}
+.hero-title{font-family:'Shippori Mincho',serif;font-size:clamp(3rem,5.5vw,5rem);line-height:1.05;font-weight:700;color:var(--ink);margin-bottom:0.3rem;}.hero-title .accent{color:var(--red);}
+.hero-jp{font-family:'Zen Kaku Gothic New',sans-serif;font-size:1rem;color:var(--matcha);font-weight:300;margin-bottom:2rem;letter-spacing:0.1em;}
+.hero-desc{font-size:1rem;line-height:1.75;color:var(--ink-soft);max-width:400px;font-weight:300;margin-bottom:3rem;}
+.hero-actions{display:flex;gap:1rem;align-items:center;}
+.btn-primary{background:var(--red);color:white;padding:0.9rem 2.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;font-weight:500;transition:transform 0.2s,background 0.2s;display:inline-block;}.btn-primary:hover{background:var(--red-warm);transform:translateY(-2px);}
+.btn-ghost-dark{color:var(--ink-soft);text-decoration:none;font-size:0.85rem;font-weight:500;display:flex;align-items:center;gap:0.4rem;transition:color 0.2s;}.btn-ghost-dark:hover{color:var(--matcha);}
+.hero-right{position:relative;overflow:hidden;background:var(--cream);}
+.hero-right-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 15% 85%,rgba(90,122,74,0.1) 0%,transparent 55%),radial-gradient(ellipse at 85% 15%,rgba(90,122,74,0.07) 0%,transparent 50%),var(--cream);}
+.hero-image-stack{position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:center;padding:5rem 2rem 3rem;}
+.fan-wrapper{position:relative;width:500px;height:520px;transform-style:preserve-3d;margin:auto;}
+.fan-tags{position:absolute;top:0;left:50%;transform:translateX(-50%);display:flex;gap:0.6rem;z-index:10;white-space:nowrap;}
+.fan-card{position:absolute;bottom:0;left:50%;width:260px;height:380px;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);transform-origin:bottom center;margin-left:-130px;transition:transform 0.55s cubic-bezier(0.23,1,0.32,1),box-shadow 0.55s ease;}
+.fan-card img{width:100%;height:100%;object-fit:cover;display:block;}
+.fan-ll{transform:rotate(-18deg);z-index:1;}.fan-l{transform:rotate(-7deg);z-index:2;}.fan-c{transform:rotate(4deg);z-index:4;}.fan-r{transform:rotate(14deg);z-index:3;}
+.fan-wrapper:hover .fan-ll{transform:rotate(-55deg);box-shadow:0 28px 70px rgba(0,0,0,0.18);}
+.fan-wrapper:hover .fan-l{transform:rotate(-20deg);box-shadow:0 28px 70px rgba(0,0,0,0.18);}
+.fan-wrapper:hover .fan-c{transform:rotate(8deg) translateY(-16px);box-shadow:0 36px 80px rgba(0,0,0,0.24);}
+.fan-wrapper:hover .fan-r{transform:rotate(42deg);box-shadow:0 28px 70px rgba(0,0,0,0.18);}
+.hero-tag{background:white;border-radius:100px;padding:0.5rem 1rem;font-size:0.7rem;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.12);display:inline-flex;align-items:center;gap:0.4rem;}
+.hero-tag.t-matcha{color:var(--matcha);border:1.5px solid var(--matcha-pale);}.hero-tag.t-red{color:var(--red);border:1.5px solid rgba(200,57,43,0.2);}
+.tag-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;}
+/* MARQUEE */
+.marquee-strip{background:var(--red);padding:0.85rem 0;overflow:hidden;white-space:nowrap;}
+.marquee-track{display:inline-flex;animation:marquee 22s linear infinite;}
+.marquee-item{display:inline-flex;align-items:center;gap:1rem;margin-right:3rem;color:white;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:500;}
+.marquee-item .sep{color:rgba(255,255,255,0.5);}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* MENU */
+.menu-section{background:var(--cream);padding:6rem 0 3rem;}
+.menu-header{text-align:center;max-width:600px;margin:0 auto 4rem;padding:0 2rem;}
+.menu-feat{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;max-width:1300px;margin:2rem auto 0;padding:0 6rem;}
+.feat-item{background:white;border-radius:16px;padding:2rem;display:flex;gap:1.5rem;align-items:flex-start;box-shadow:0 4px 20px rgba(0,0,0,0.06);}
+.feat-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}.feat-icon.green{background:var(--matcha-pale);}.feat-icon.red{background:var(--blush);}
+.feat-body h4{font-family:'Shippori Mincho',serif;font-size:1rem;font-weight:700;margin-bottom:0.3rem;}.feat-body p{font-size:0.82rem;color:var(--ink-soft);line-height:1.6;font-weight:300;}
+/* TURNSTILE */
+.turnstile-wrap{position:relative;width:100%;padding:0 0 3rem;overflow:hidden;background:var(--cream);}
+.turnstile-stage{position:relative;height:500px;perspective:1100px;display:flex;align-items:center;justify-content:center;touch-action:pan-y;}
+.tcard{position:absolute;width:280px;height:390px;border-radius:22px;overflow:hidden;cursor:grab;box-shadow:0 20px 60px rgba(0,0,0,0.15);transition:transform 0.65s cubic-bezier(0.23,1,0.32,1),opacity 0.55s ease,box-shadow 0.4s;}
+.tcard:active{cursor:grabbing;}.tcard img{width:100%;height:100%;object-fit:contain;display:block;pointer-events:none;background:#faf6ef;}
+.tcard-info{position:absolute;bottom:0;left:0;right:0;padding:2rem 1.4rem 1.4rem;background:linear-gradient(to top,rgba(20,16,14,0.88) 0%,transparent 100%);transform:translateY(6px);transition:transform 0.3s ease;}.tcard:hover .tcard-info{transform:translateY(0);}
+.tcard-badge{display:inline-block;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;padding:0.22rem 0.65rem;border-radius:100px;margin-bottom:0.45rem;}
+.tb-sweet{background:rgba(240,213,200,0.9);color:#9a2b20;}.tb-savory{background:rgba(80,110,65,0.88);color:white;}.tb-special{background:rgba(245,195,100,0.9);color:#5a3800;}
+.tcard-name{font-family:'Shippori Mincho',serif;font-size:1rem;font-weight:700;color:white;line-height:1.3;margin-bottom:0.3rem;}.tcard-price{font-size:0.88rem;font-weight:700;color:var(--matcha-pale);font-family:'Shippori Mincho',serif;}
+.tcard[data-pos="0"]{transform:translateX(0) translateZ(0) scale(1);z-index:10;opacity:1;}.tcard[data-pos="1"]{transform:translateX(230px) translateZ(-120px) scale(0.74);z-index:6;opacity:0.5;}.tcard[data-pos="-1"]{transform:translateX(-230px) translateZ(-120px) scale(0.74);z-index:6;opacity:0.5;}.tcard[data-pos="2"]{transform:translateX(370px) translateZ(-220px) scale(0.56);z-index:3;opacity:0.22;}.tcard[data-pos="-2"]{transform:translateX(-370px) translateZ(-220px) scale(0.56);z-index:3;opacity:0.22;}.tcard[data-pos="hidden"]{transform:translateX(0) translateZ(-600px) scale(0.3);z-index:1;opacity:0;pointer-events:none;}
+.turnstile-controls{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-top:2rem;}
+.tc-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(90,122,74,0.3);background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);transition:all 0.2s;}.tc-btn:hover{background:var(--matcha);border-color:var(--matcha);color:white;transform:scale(1.08);}
+.tc-dots{display:flex;gap:0.45rem;align-items:center;}.tc-dot{width:6px;height:6px;border-radius:50%;background:rgba(90,122,74,0.22);cursor:pointer;transition:all 0.3s;}.tc-dot.on{width:18px;border-radius:3px;background:var(--matcha);}
+/* MENU MODAL */
+.menu-modal-overlay{position:fixed;inset:0;background:rgba(26,23,20,0.85);backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity 0.35s ease;}.menu-modal-overlay.open{opacity:1;pointer-events:all;}
+.menu-modal{background:var(--cream);border-radius:20px;width:100%;max-width:900px;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.35);transform:translateY(24px) scale(0.97);transition:transform 0.35s cubic-bezier(0.23,1,0.32,1);}.menu-modal-overlay.open .menu-modal{transform:translateY(0) scale(1);}
+.menu-modal-header{display:flex;align-items:center;justify-content:space-between;padding:1.4rem 1.8rem;border-bottom:1px solid rgba(0,0,0,0.08);background:white;}
+.menu-modal-title{font-family:'Shippori Mincho',serif;font-size:1.1rem;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:0.6rem;}.menu-modal-title span{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--matcha);font-weight:600;font-family:'DM Sans',sans-serif;}
+.menu-modal-actions{display:flex;align-items:center;gap:0.8rem;}
+.menu-modal-download{display:inline-flex;align-items:center;gap:0.4rem;background:var(--matcha);color:white;padding:0.5rem 1.1rem;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;transition:background 0.2s,transform 0.2s;}.menu-modal-download:hover{background:var(--matcha-light);transform:translateY(-1px);}
+.menu-modal-close{width:34px;height:34px;border-radius:50%;background:var(--cream);border:1.5px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;color:var(--ink-soft);transition:background 0.2s,color 0.2s;line-height:1;}.menu-modal-close:hover{background:var(--red);color:white;border-color:var(--red);}
+.menu-modal-body{flex:1;overflow-y:auto;background:#f5f2ec;display:flex;flex-direction:column;}.menu-modal-body img{width:100%;height:auto;display:block;}
+.view-menu-strip{text-align:center;padding:2.5rem 2rem 4rem;background:var(--cream);}.view-menu-strip p{font-size:0.85rem;color:var(--ink-soft);font-weight:300;margin-bottom:1.2rem;}
+.btn-view-menu{display:inline-flex;align-items:center;gap:0.7rem;background:var(--ink);color:white;padding:0.95rem 2.4rem;border-radius:100px;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;transition:background 0.25s,transform 0.25s,box-shadow 0.25s;font-family:'DM Sans',sans-serif;letter-spacing:0.04em;}.btn-view-menu:hover{background:var(--red);transform:translateY(-3px);box-shadow:0 12px 36px rgba(200,57,43,0.28);}
+/* MATCHA */
+.matcha-section{background:var(--matcha);padding:7rem 6rem;position:relative;overflow:hidden;}
+.matcha-section::before{content:'抹茶';position:absolute;font-family:'Zen Kaku Gothic New',sans-serif;font-size:20rem;font-weight:700;color:rgba(255,255,255,0.04);right:-2rem;bottom:-3rem;line-height:1;pointer-events:none;}
+.matcha-top-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;margin-bottom:4rem;}
+.matcha-content .section-label{color:var(--matcha-pale);}.matcha-content .section-label::before{background:var(--matcha-pale);}.matcha-content .section-title{color:white;}.matcha-content .section-body{color:rgba(255,255,255,0.75);}
+.drinks-menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+.matcha-latte-spotlight{position:relative;display:flex;flex-direction:column;align-items:center;gap:1.1rem;padding:1.5rem;}
+.ml-orb{position:absolute;border-radius:50%;filter:blur(40px);pointer-events:none;animation:ml-float 6s ease-in-out infinite;}
+.ml-orb1{width:180px;height:180px;background:rgba(90,122,74,0.35);top:-20px;right:-10px;}.ml-orb2{width:120px;height:120px;background:rgba(138,170,106,0.25);bottom:10px;left:-10px;animation-delay:2s;}.ml-orb3{width:80px;height:80px;background:rgba(245,201,122,0.2);top:40%;right:-30px;animation-delay:4s;}
+@keyframes ml-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+.ml-kanji{position:absolute;top:-10px;left:-10px;font-family:'Zen Kaku Gothic New',sans-serif;font-size:3.2rem;font-weight:700;color:rgba(255,255,255,0.06);line-height:1;pointer-events:none;z-index:0;}
+.ml-glass-card{position:relative;z-index:2;width:230px;height:300px;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,0.14) 0%,rgba(255,255,255,0.05) 100%);border:1.5px solid rgba(255,255,255,0.22);box-shadow:0 30px 70px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.18);backdrop-filter:blur(12px);overflow:visible;display:flex;align-items:center;justify-content:center;transition:transform 0.5s cubic-bezier(0.23,1,0.32,1);}.ml-glass-card:hover{transform:translateY(-8px) rotate(-1deg);}
+.ml-img-wrap{width:85%;height:85%;position:relative;z-index:2;}.ml-img{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.45));}
+.ml-badge{position:absolute;display:flex;align-items:center;gap:0.45rem;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(8px);border-radius:100px;padding:0.4rem 0.9rem;font-size:0.68rem;font-weight:600;color:white;letter-spacing:0.05em;z-index:5;white-space:nowrap;}.ml-badge-top{top:-14px;right:-20px;}.ml-badge-bottom{bottom:-14px;left:-20px;}
+.ml-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--matcha-pale);flex-shrink:0;}
+.ml-label-row{display:flex;align-items:center;justify-content:space-between;width:230px;margin-top:0.5rem;z-index:2;}.ml-label-name{font-family:'Shippori Mincho',serif;font-size:0.85rem;font-weight:700;color:white;}.ml-label-price{font-size:0.78rem;color:var(--matcha-pale);font-weight:600;}
+.hot-sale-badge{display:inline-flex;align-items:center;gap:0.3rem;background:linear-gradient(135deg,#ff6b35,#f7c948);color:white;font-size:0.55rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:0.18rem 0.55rem;border-radius:100px;margin-left:0.5rem;vertical-align:middle;box-shadow:0 2px 8px rgba(255,107,53,0.45);animation:hot-pulse 2s ease-in-out infinite;}
+@keyframes hot-pulse{0%,100%{box-shadow:0 2px 8px rgba(255,107,53,0.45);}50%{box-shadow:0 4px 16px rgba(255,107,53,0.75);}}
+.drink-item-hot{background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);border-radius:10px;padding:0.65rem 0.7rem;margin:-0.65rem -0.7rem;}
+/* FOOTER */
+footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem;}
+.footer-tagline{font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}.footer-desc{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;max-width:280px;}
+.footer-col h5{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-light);margin-bottom:1.2rem;font-weight:600;}
+.footer-col a,.footer-col p{display:block;font-size:0.85rem;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:0.7rem;font-weight:300;transition:color 0.2s;}.footer-col a:hover{color:white;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;}.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.25);}.footer-jp{font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.15);letter-spacing:0.1em;}
+/* RESPONSIVE */
+@media(max-width:1024px){
+  nav{padding:0.8rem 1.5rem;}.nav-links{display:none;}.nav-hamburger{display:flex;z-index:101;position:relative;}
+  .nav-logo img{width:140px;height:auto;}
+  .hero{grid-template-columns:1fr;}.hero-left{padding:7rem 2.5rem 4rem;}.hero-right{height:60vw;min-height:400px;}
+  .fan-wrapper{width:360px;height:420px;margin:0 auto;}.fan-card{width:200px;height:290px;margin-left:-100px;}
+  .menu-feat{grid-template-columns:1fr;padding:0 2rem;}
+  .matcha-top-grid{grid-template-columns:1fr;gap:3rem;}.matcha-section{padding:5rem 2.5rem;}
+  .drinks-menu-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2.5rem;}footer{padding:4rem 2.5rem 2rem;}
+}
+@media(max-width:640px){
+  .nav-logo img{width:110px;height:auto;}
+  .hero{display:flex;flex-direction:column;}.hero-left{padding:5.5rem 1.5rem 2rem;order:1;}.hero-right{order:2;height:380px;min-height:380px;}
+  .hero-image-stack{padding:1rem;width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+  .fan-wrapper{width:320px;height:340px;}.fan-card{width:175px;height:255px;margin-left:-87px;}
+  .hero-title{font-size:2.4rem;}.hero-desc{font-size:0.9rem;}.hero-actions{flex-direction:column;align-items:flex-start;gap:0.8rem;}
+  .menu-section{padding:3rem 0 2rem;}.menu-feat{padding:0 1.5rem;}
+  .matcha-section{padding:4rem 1.5rem;}.drinks-menu-grid{grid-template-columns:1fr;}
+  .turnstile-stage{height:420px;}.tcard{width:230px;height:320px;}
+  .tcard[data-pos="1"]{transform:translateX(180px) translateZ(-100px) scale(0.74);opacity:0.45;}.tcard[data-pos="-1"]{transform:translateX(-180px) translateZ(-100px) scale(0.74);opacity:0.45;}
+  .tcard[data-pos="2"]{transform:translateX(290px) translateZ(-190px) scale(0.55);opacity:0.18;}.tcard[data-pos="-2"]{transform:translateX(-290px) translateZ(-190px) scale(0.55);opacity:0.18;}
+  .footer-top{grid-template-columns:1fr;gap:2rem;}footer{padding:3rem 1.5rem 2rem;}.footer-bottom{flex-direction:column;gap:0.8rem;text-align:center;}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><img src="kremi_logo_white_removebg.png" alt="Kremi"></a>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="our-story.html">Our Story</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="events.html#enquiry" class="nav-cta">Book an Event</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <a href="#menu">Menu</a>
+  <a href="our-story.html">Our Story</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="events.html">Events</a>
+  <a href="events.html#enquiry" class="nav-cta">Book an Event</a>
+</div>
+
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Made to order · Singapore</p>
+    <h1 class="hero-title">Hand&shy;crafted<br><span class="accent">Crepes</span><br>from Japan's<br>heart</h1>
+    <p class="hero-jp">クレープと抹茶の専門店</p>
+    <p class="hero-desc">Delicately made Japanese crepes and ceremonial-grade matcha — inspired by the streets of Japan, made fresh for you in Singapore.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">Explore the Menu</a>
+      <a href="our-story.html#visit" class="btn-ghost-dark">Find Us at → SCAPE #02-32</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-bg"></div>
+    <div class="hero-image-stack">
+      <div class="fan-wrapper">
+        <div class="fan-tags">
+          <div class="hero-tag t-matcha"><span class="tag-dot"></span>Ceremonial Matcha</div>
+          <div class="hero-tag t-red"><span class="tag-dot"></span>Made Fresh Daily</div>
+        </div>
+        <div class="fan-card fan-c"><img src="Strawberry_crepe.jpg" alt="Strawberry Crepe"></div>
+        <div class="fan-card fan-l"><img src="cookie_and_cream_crepe.webp" alt="Cookie and Cream Crepe"></div>
+        <div class="fan-card fan-r"><img src="matcha_crepe.webp" alt="Matcha Crepe"></div>
+        <div class="fan-card fan-ll"><img src="spicy_noodle_crepe.webp" alt="Spicy Noodle Crepe"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="marquee-item">Banana Pudding Matcha Brûlée <span class="sep">✦</span></span>
+    <span class="marquee-item">Mochi Strawberry <span class="sep">✦</span></span>
+    <span class="marquee-item">Mt. Buldak <span class="sep">✦</span></span>
+    <span class="marquee-item">Oreo Cream Cheese <span class="sep">✦</span></span>
+    <span class="marquee-item">Strawberry Nutella <span class="sep">✦</span></span>
+    <span class="marquee-item">Strawberry Matcha <span class="sep">✦</span></span>
+    <span class="marquee-item">Banana Cookie Butter <span class="sep">✦</span></span>
+    <span class="marquee-item">Choco <span class="sep">✦</span></span>
+    <span class="marquee-item">Spicy Tuna Mayo <span class="sep">✦</span></span>
+    <span class="marquee-item">Strawberry Cream Cheesecake <span class="sep">✦</span></span>
+    <span class="marquee-item">Banana Pudding Matcha Brûlée <span class="sep">✦</span></span>
+    <span class="marquee-item">Mochi Strawberry <span class="sep">✦</span></span>
+    <span class="marquee-item">Mt. Buldak <span class="sep">✦</span></span>
+    <span class="marquee-item">Oreo Cream Cheese <span class="sep">✦</span></span>
+    <span class="marquee-item">Strawberry Nutella <span class="sep">✦</span></span>
+    <span class="marquee-item">Strawberry Matcha <span class="sep">✦</span></span>
+    <span class="marquee-item">Banana Cookie Butter <span class="sep">✦</span></span>
+    <span class="marquee-item">Choco <span class="sep">✦</span></span>
+    <span class="marquee-item">Spicy Tuna Mayo <span class="sep">✦</span></span>
+    <span class="marquee-item">Strawberry Cream Cheesecake <span class="sep">✦</span></span>
+  </div>
+</div>
+
+<section class="menu-section" id="menu">
+  <div class="menu-header reveal">
+    <p class="section-label" style="justify-content:center;">Our Creations</p>
+    <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.2rem);">Every crepe, a<br>little piece of Japan</h2>
+    <p style="color:var(--ink-soft);font-size:0.95rem;line-height:1.8;font-weight:300;margin-top:1rem;">Made fresh to order, each crepe is wrapped with care and filled with ingredients chosen for balance of texture, flavour, and artistry.</p>
+  </div>
+  <div class="turnstile-wrap">
+    <div class="turnstile-stage" id="tStage"></div>
+    <div class="turnstile-controls">
+      <button class="tc-btn" onclick="tStep(-1)" aria-label="Previous"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div class="tc-dots" id="tDots"></div>
+      <button class="tc-btn" onclick="tStep(1)" aria-label="Next"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+    </div>
+  </div>
+  <div class="menu-feat">
+    <div class="feat-item reveal"><div class="feat-icon green">🌿</div><div class="feat-body"><h4>Made Fresh to Order</h4><p>Every crepe is made when you order — batter hits the griddle, fillings layered with care, delivered warm and soft every time.</p></div></div>
+    <div class="feat-item reveal d2"><div class="feat-icon red">🍓</div><div class="feat-body"><h4>Sweet &amp; Savoury</h4><p>From matcha brûlée to spicy buldak — our menu has something for every mood, whether you want a sweet treat or a proper bite.</p></div></div>
+  </div>
+</section>
+
+<div class="menu-modal-overlay" id="menuModal" onclick="handleModalOverlayClick(event)">
+  <div class="menu-modal">
+    <div class="menu-modal-header">
+      <div class="menu-modal-title">Kremi Full Menu <span>クレープと抹茶</span></div>
+      <div class="menu-modal-actions">
+        <a id="menuDownloadBtn" href="KrēmiCrepeMenu.png" download="Kremi_Crepe_Menu.png" class="menu-modal-download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</a>
+        <button class="menu-modal-close" onclick="closeMenuPDF()">✕</button>
+      </div>
+    </div>
+    <div style="display:flex;border-bottom:1px solid rgba(0,0,0,0.08);background:white;padding:0 1.8rem;">
+      <button id="tabCrepe" onclick="switchMenuTab('crepe')" style="padding:0.8rem 1.4rem;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;border:none;background:none;cursor:pointer;border-bottom:2px solid var(--matcha);color:var(--matcha);font-family:'DM Sans',sans-serif;">🥞 Crepe Menu</button>
+      <button id="tabDrinks" onclick="switchMenuTab('drinks')" style="padding:0.8rem 1.4rem;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;color:var(--ink-soft);font-family:'DM Sans',sans-serif;">🍵 Drinks Menu</button>
+    </div>
+    <div class="menu-modal-body"><img id="menuImgView" loading="lazy" src="KrēmiCrepeMenu.png" alt="Kremi Menu"></div>
+  </div>
+</div>
+
+<section class="matcha-section" id="matcha">
+  <div class="matcha-top-grid">
+    <div class="matcha-content reveal">
+      <p class="section-label">Matcha Latte</p>
+      <h2 class="section-title">Shizuoka<br>Ceremonial<br>Matcha</h2>
+      <p class="section-body">Premium first harvest matcha, cold whisked for a bright, silky cup with vibrant colour, gentle umami sweetness and a smooth refreshing finish.</p>
+      <p class="section-body">Freshly whisked and served with care. Because a great crepe deserves a great drink beside it.</p>
+    </div>
+    <div class="matcha-latte-spotlight">
+      <div class="ml-orb ml-orb1"></div><div class="ml-orb ml-orb2"></div><div class="ml-orb ml-orb3"></div>
+      <div class="ml-kanji">抹茶</div>
+      <div class="ml-glass-card">
+        <div class="ml-img-wrap"><img loading="lazy" src="kremi_s_matcha_latte.png" alt="Kremi Matcha Latte" class="ml-img"></div>
+        <div class="ml-badge ml-badge-top"><span class="ml-badge-dot"></span>First Harvest</div>
+        <div class="ml-badge ml-badge-bottom"><span class="ml-badge-dot" style="background:#f5c97a;"></span>Shizuoka, Japan</div>
+      </div>
+      <div class="ml-label-row"><span class="ml-label-name">Kremi Matcha Latte</span><span class="ml-label-price">from $7.50</span></div>
+    </div>
+  </div>
+  <div class="reveal drinks-menu-grid">
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:1.6rem;">
+      <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-pale);font-weight:600;margin-bottom:1rem;">Matcha</div>
+      <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);margin-bottom:1.2rem;line-height:1.6;">Oatmilk +$1.0 · Carrier +$0.2</div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">🍵 Signature <span class="hot-sale-badge">🔥 Hot Sale</span></div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Floral, Nutty, Creamy</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$7.50</div></div>
+        <div class="drink-item-hot"><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">⭐ Rin Matcha Latte <span class="hot-sale-badge">🔥 Hot Sale</span></div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Multi-dimensional Umami Flavour</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$8.50</div></div>
+        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">🌸 Ajisai Matcha Latte</div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Umami, Soybean, Pistachio</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$8.50</div></div>
+      </div>
+      <div style="margin-top:1.2rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);">
+        <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.6rem;">Add-ons</div>
+        <div style="color:rgba(255,255,255,0.55);font-size:0.72rem;line-height:1.9;">Strawberry / Mango / Blueberry <span style="color:var(--matcha-pale);">+$1</span><br>Banana Pudding <span style="color:var(--matcha-pale);">+$2.50</span><br>Black Sesame Cold Foam <span style="color:var(--matcha-pale);">+$2.50</span><br>Sea Salt Cold Foam <span style="color:var(--matcha-pale);">+$2</span></div>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:1.6rem;">
+      <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-pale);font-weight:600;margin-bottom:1rem;">Coffee</div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">☕ Mont Blanc</div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Coffee, Cream, Orange &amp; Spice</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$7.50</div></div>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:1.6rem;">
+      <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-pale);font-weight:600;margin-bottom:1rem;">Others</div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">🍂 Hojicha Latte</div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Dark Roast, Hazelnut Smokey Note</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$7.00</div></div>
+        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">🌾 Genmai Latte</div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Toasty Aroma, Cereal Milk Taste</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$7.00</div></div>
+        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">🍫 Sea Salt Iced Chocolate</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$6.00</div></div>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:1.6rem;">
+      <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-pale);font-weight:600;margin-bottom:1rem;">Thirst Quencher</div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">🍇 White Grape Fizz</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$5.00</div></div>
+        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">🍋 Sparkling Yuzu</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$5.00</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="view-menu-strip reveal">
+  <p>See our full Crepe &amp; Drinks menu</p>
+  <button class="btn-view-menu" onclick="openMenuPDF('crepe')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>View Full Menu<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+  <p style="font-size:0.75rem;color:var(--matcha);opacity:0.75;margin-top:0.6rem;margin-bottom:0;">Crepe Menu &amp; Drinks Menu — switch between tabs</p>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div><img src="kremi_logo_white_removebg.png" alt="Kremi" style="width:220px;height:auto;display:block;margin-bottom:0.5rem;"></div>
+      <div class="footer-tagline">クレープと抹茶 · Japanese Crepes &amp; Matcha</div>
+      <p class="footer-desc">Handcrafted Japanese crepes and ceremonial-grade matcha, inspired by the streets of Japan. Made fresh for you at *SCAPE, Singapore.</p>
+    </div>
+    <div class="footer-col"><h5>Explore</h5><a href="#menu">Menu</a><a href="#matcha">Matcha &amp; Drinks</a><a href="our-story.html#visit">Visit Us</a><a href="our-story.html">Our Story</a><a href="reviews.html">Reviews</a></div>
+    <div class="footer-col"><h5>Events</h5><a href="events.html">Book an Event</a><a href="events.html#past-events">Past Events</a><a href="events.html#enquiry">Send Enquiry</a></div>
+    <div class="footer-col"><h5>Visit</h5><p>2 Orchard Link, #02-32</p><p>*SCAPE, Singapore 237978</p><p style="margin-top:0.5rem;">Daily 12pm – 8.45pm</p><a href="mailto:kremicollective@gmail.com" style="margin-top:0.5rem;">kremicollective@gmail.com</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Kremi Singapore. All rights reserved.</span>
+    <a href="https://www.instagram.com/de.makers.space/" target="_blank" rel="noopener noreferrer" style="font-size:0.72rem;color:rgba(255,255,255,0.25);text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.25)'">Website Designed by De Makers Space</a>
+    <span class="footer-jp">手作りクレープ</span>
+  </div>
+</footer>
+
+<script>
+var menuFiles={crepe:{img:'KrēmiCrepeMenu.png',dl:'Kremi_Crepe_Menu.png'},drinks:{img:'KrēmiDrinksMenuA4.png',dl:'Kremi_Drinks_Menu.png'}};
+function openMenuPDF(tab){tab=tab||'crepe';switchMenuTab(tab);document.getElementById('menuModal').classList.add('open');document.body.style.overflow='hidden';}
+function switchMenuTab(tab){var f=menuFiles[tab];document.getElementById('menuImgView').src=f.img;document.getElementById('menuDownloadBtn').href=f.img;document.getElementById('menuDownloadBtn').download=f.dl;document.getElementById('tabCrepe').style.borderBottomColor=tab==='crepe'?'var(--matcha)':'transparent';document.getElementById('tabCrepe').style.color=tab==='crepe'?'var(--matcha)':'var(--ink-soft)';document.getElementById('tabDrinks').style.borderBottomColor=tab==='drinks'?'var(--matcha)':'transparent';document.getElementById('tabDrinks').style.color=tab==='drinks'?'var(--matcha)':'var(--ink-soft)';}
+function closeMenuPDF(){document.getElementById('menuModal').classList.remove('open');document.body.style.overflow='';}
+function handleModalOverlayClick(e){if(e.target===document.getElementById('menuModal'))closeMenuPDF();}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenuPDF();});
+var reveals=document.querySelectorAll('.reveal');
+var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.12});
+reveals.forEach(function(el){observer.observe(el);});
+document.body.classList.add('js-ready');
+var tCrepes=[{img:'menustrawberrycreamcheese.png',name:'Strawberry Cream Cheese',badge:'⭐ Bestseller',bc:'tb-special',price:'S$14.90'},{img:'menumochistrawberry.png',name:'Mochi Strawberry',badge:'⭐ Bestseller',bc:'tb-special',price:'S$11.90'},{img:'menuspicytunamayo.png',name:'Spicy Tuna Mayo',badge:'⭐ Bestseller',bc:'tb-savory',price:'S$9.90'},{img:'menubananapuddingbrulee.png',name:'Banana Pudding Matcha Brûlée',badge:'🔥 Limited Qty',bc:'tb-special',price:'S$14.90'},{img:'menustrawberrymatcha.png',name:'Strawberry Matcha',badge:'Sweet',bc:'tb-sweet',price:'S$11.90'},{img:'menustrawberrynutella.png',name:'Strawberry Nutella',badge:'Sweet',bc:'tb-sweet',price:'S$11.90'},{img:'menuoreocreamcheese.png',name:'Oreo Cream Cheese',badge:'Sweet',bc:'tb-sweet',price:'S$11.90'},{img:'menumtbuldak.png',name:'Mt. Buldak',badge:'Savoury',bc:'tb-savory',price:'S$11.90'},{img:'menubananacookiebutter.png',name:'Banana Cookie Butter',badge:'Sweet',bc:'tb-sweet',price:'S$9.90'},{img:'menuchoco.png',name:'Choco',badge:'Sweet',bc:'tb-sweet',price:'S$9.90'}];
+var tCur=0,tN=tCrepes.length,tPaused=false,tTimer=null,tDragX=0,tDragging=false,tDelta=0;
+function tBuild(){var stage=document.getElementById('tStage');var dots=document.getElementById('tDots');if(!stage)return;stage.innerHTML='';dots.innerHTML='';tCrepes.forEach(function(c,i){var card=document.createElement('div');card.className='tcard';card.innerHTML='<img src="'+c.img+'" alt="'+c.name+'" loading="lazy"><div class="tcard-info"><span class="tcard-badge '+c.bc+'">'+c.badge+'</span><div class="tcard-name">'+c.name+'</div><div class="tcard-price">'+c.price+'</div></div>';stage.appendChild(card);var dot=document.createElement('div');dot.className='tc-dot'+(i===0?' on':'');dot.addEventListener('click',(function(idx){return function(){tGoTo(idx);};})(i));dots.appendChild(dot);});tRender();tAttachSwipe();tStartAuto();}
+function tRender(){var cards=document.querySelectorAll('.tcard');var dots=document.querySelectorAll('.tc-dot');cards.forEach(function(card,i){var rel=((i-tCur)%tN+tN)%tN;var signed=rel<=tN/2?rel:rel-tN;var pos;if(signed===0)pos='0';else if(signed===1)pos='1';else if(signed===-1)pos='-1';else if(signed===2)pos='2';else if(signed===-2)pos='-2';else pos='hidden';card.setAttribute('data-pos',pos);});dots.forEach(function(d,i){d.classList.toggle('on',i===tCur);});}
+function tStep(dir){tCur=(tCur+dir+tN)%tN;tRender();tResetAuto();}function tGoTo(idx){tCur=idx;tRender();tResetAuto();}
+function tStartAuto(){clearTimeout(tTimer);if(!tPaused)tTimer=setTimeout(function(){tStep(1);tStartAuto();},5000);}function tResetAuto(){if(!tPaused){clearTimeout(tTimer);tStartAuto();}}
+function tAttachSwipe(){var stage=document.getElementById('tStage');stage.addEventListener('touchstart',function(e){tDragX=e.touches[0].clientX;tDragging=true;},{passive:true});stage.addEventListener('touchmove',function(e){if(tDragging)tDelta=e.touches[0].clientX-tDragX;},{passive:true});stage.addEventListener('touchend',function(){if(tDragging&&Math.abs(tDelta)>45)tStep(tDelta<0?1:-1);tDragging=false;tDelta=0;});stage.addEventListener('mousedown',function(e){tDragX=e.clientX;tDragging=true;e.preventDefault();});window.addEventListener('mousemove',function(e){if(tDragging)tDelta=e.clientX-tDragX;});window.addEventListener('mouseup',function(){if(tDragging&&Math.abs(tDelta)>45)tStep(tDelta<0?1:-1);tDragging=false;tDelta=0;});}
+document.addEventListener('DOMContentLoaded',function(){tBuild();var h=document.getElementById('hamburger');var m=document.getElementById('mobileNav');if(h&&m){h.addEventListener('click',function(){
+    var isOpen=m.classList.contains('open');
+    if(isOpen){h.classList.remove('open');m.classList.remove('open');document.body.style.overflow='';}
+    else{h.classList.add('open');m.classList.add('open');document.body.style.overflow='hidden';}
+  });
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');m.classList.remove('open');document.body.style.overflow='';});});
+  m.addEventListener('click',function(e){if(e.target===m){h.classList.remove('open');m.classList.remove('open');document.body.style.overflow='';}});
+  window.addEventListener('pageshow',function(){h.classList.remove('open');m.classList.remove('open');document.body.style.overflow='';});}});
+var nav=document.getElementById('nav');
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60);});
+</script>
+</body>
+</html>
