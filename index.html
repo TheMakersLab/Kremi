@@ -99,11 +99,11 @@ nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border
 .ml-orb1{width:180px;height:180px;background:rgba(90,122,74,0.35);top:-20px;right:-10px;}.ml-orb2{width:120px;height:120px;background:rgba(138,170,106,0.25);bottom:10px;left:-10px;animation-delay:2s;}.ml-orb3{width:80px;height:80px;background:rgba(245,201,122,0.2);top:40%;right:-30px;animation-delay:4s;}
 @keyframes ml-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
 .ml-kanji{position:absolute;top:-10px;left:-10px;font-family:'Zen Kaku Gothic New',sans-serif;font-size:3.2rem;font-weight:700;color:rgba(255,255,255,0.06);line-height:1;pointer-events:none;z-index:0;}
-.ml-glass-card{position:relative;z-index:2;width:230px;height:300px;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,0.14) 0%,rgba(255,255,255,0.05) 100%);border:1.5px solid rgba(255,255,255,0.22);box-shadow:0 30px 70px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.18);backdrop-filter:blur(12px);overflow:visible;display:flex;align-items:center;justify-content:center;transition:transform 0.5s cubic-bezier(0.23,1,0.32,1);}.ml-glass-card:hover{transform:translateY(-8px) rotate(-1deg);}
-.ml-img-wrap{width:85%;height:85%;position:relative;z-index:2;}.ml-img{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.45));}
+.ml-glass-card{position:relative;z-index:2;width:300px;height:380px;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,0.14) 0%,rgba(255,255,255,0.05) 100%);border:1.5px solid rgba(255,255,255,0.22);box-shadow:0 30px 70px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.18);backdrop-filter:blur(12px);overflow:visible;display:flex;align-items:center;justify-content:center;transition:transform 0.5s cubic-bezier(0.23,1,0.32,1);}.ml-glass-card:hover{transform:translateY(-8px) rotate(-1deg);}
+.ml-img-wrap{width:90%;height:90%;position:relative;z-index:2;}.ml-img{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.45));}
 .ml-badge{position:absolute;display:flex;align-items:center;gap:0.45rem;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(8px);border-radius:100px;padding:0.4rem 0.9rem;font-size:0.68rem;font-weight:600;color:white;letter-spacing:0.05em;z-index:5;white-space:nowrap;}.ml-badge-top{top:-14px;right:-20px;}.ml-badge-bottom{bottom:-14px;left:-20px;}
 .ml-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--matcha-pale);flex-shrink:0;}
-.ml-label-row{display:flex;align-items:center;justify-content:space-between;width:230px;margin-top:0.5rem;z-index:2;}.ml-label-name{font-family:'Shippori Mincho',serif;font-size:0.85rem;font-weight:700;color:white;}.ml-label-price{font-size:0.78rem;color:var(--matcha-pale);font-weight:600;}
+.ml-label-row{display:flex;align-items:center;justify-content:space-between;width:300px;margin-top:0.5rem;z-index:2;}.ml-label-name{font-family:'Shippori Mincho',serif;font-size:0.85rem;font-weight:700;color:white;}.ml-label-price{font-size:0.78rem;color:var(--matcha-pale);font-weight:600;}
 .hot-sale-badge{display:inline-flex;align-items:center;gap:0.3rem;background:linear-gradient(135deg,#ff6b35,#f7c948);color:white;font-size:0.55rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:0.18rem 0.55rem;border-radius:100px;margin-left:0.5rem;vertical-align:middle;box-shadow:0 2px 8px rgba(255,107,53,0.45);animation:hot-pulse 2s ease-in-out infinite;}
 @keyframes hot-pulse{0%,100%{box-shadow:0 2px 8px rgba(255,107,53,0.45);}50%{box-shadow:0 4px 16px rgba(255,107,53,0.75);}}
 .drink-item-hot{background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);border-radius:10px;padding:0.65rem 0.7rem;margin:-0.65rem -0.7rem;}
@@ -253,20 +253,20 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
 <section class="matcha-section" id="matcha">
   <div class="matcha-top-grid">
     <div class="matcha-content reveal">
-      <p class="section-label">Matcha Latte</p>
+      <p class="section-label">Ceremonial Matcha</p>
       <h2 class="section-title">Shizuoka<br>Ceremonial<br>Matcha</h2>
-      <p class="section-body">Premium first harvest matcha, cold whisked for a bright, silky cup with vibrant colour, gentle umami sweetness and a smooth refreshing finish.</p>
-      <p class="section-body">Freshly whisked and served with care. Because a great crepe deserves a great drink beside it.</p>
+      <p class="section-body">Premium first harvest matcha, sourced from Shizuoka, Japan — prized for its vivid colour, gentle umami sweetness and smooth, layered depth.</p>
+      <p class="section-body">The same ceremonial-grade matcha we use in every cup. Pure, unadulterated, and crafted to pair beautifully with our Japanese crepes.</p>
     </div>
     <div class="matcha-latte-spotlight">
       <div class="ml-orb ml-orb1"></div><div class="ml-orb ml-orb2"></div><div class="ml-orb ml-orb3"></div>
       <div class="ml-kanji">抹茶</div>
       <div class="ml-glass-card">
-        <div class="ml-img-wrap"><img loading="lazy" src="kremi_s_matcha_latte.png" alt="Kremi Matcha Latte" class="ml-img"></div>
+        <div class="ml-img-wrap"><img loading="lazy" src="kremimatchatin.png" alt="Kremi Matcha Tin" class="ml-img"></div>
         <div class="ml-badge ml-badge-top"><span class="ml-badge-dot"></span>First Harvest</div>
         <div class="ml-badge ml-badge-bottom"><span class="ml-badge-dot" style="background:#f5c97a;"></span>Shizuoka, Japan</div>
       </div>
-      <div class="ml-label-row"><span class="ml-label-name">Kremi Matcha Latte</span><span class="ml-label-price">from $7.50</span></div>
+      <div class="ml-label-row"><span class="ml-label-name">Kremi Matcha Tin</span><span class="ml-label-price">Shizuoka, Japan</span></div>
     </div>
   </div>
   <div class="reveal drinks-menu-grid">
