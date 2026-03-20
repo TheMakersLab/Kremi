@@ -75,19 +75,19 @@ nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border
 /* EVENT REVIEW CARDS — slightly different feel */
 .review-card.event-card{border-left:3px solid var(--honey);}
 
-/* CTA */
-.reviews-cta{background:var(--matcha);padding:5rem 6rem;text-align:center;position:relative;overflow:hidden;}
-.reviews-cta::before{content:'★';position:absolute;font-size:20rem;color:rgba(255,255,255,0.04);top:50%;left:4%;transform:translateY(-50%);pointer-events:none;line-height:1;}
-.reviews-cta h2{font-family:'Shippori Mincho',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:white;margin-bottom:0.8rem;}
-.reviews-cta p{font-size:1rem;color:rgba(255,255,255,0.75);font-weight:300;margin-bottom:2.5rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;}
-.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
-.btn-white{background:white;color:var(--matcha);padding:0.9rem 2.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:transform 0.2s,box-shadow 0.2s;display:inline-block;}.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.15);}
-.btn-ghost-white{color:white;text-decoration:none;font-size:0.85rem;font-weight:500;opacity:0.85;transition:opacity 0.2s;display:inline-block;padding:0.9rem 2.2rem;border:1.5px solid rgba(255,255,255,0.4);border-radius:100px;}.btn-ghost-white:hover{opacity:1;}
+/* CTA — Japan Flag */
+.reviews-cta{background:white;padding:6rem 6rem;text-align:center;position:relative;overflow:hidden;}
+.reviews-cta::before{content:'';position:absolute;width:720px;height:720px;border-radius:50%;background:#c8392b;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.reviews-cta h2{font-family:'Shippori Mincho',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:white;margin-bottom:0.8rem;position:relative;z-index:1;}
+.reviews-cta p{font-size:1rem;color:rgba(255,255,255,0.85);font-weight:300;margin-bottom:2.5rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.7;position:relative;z-index:1;}
+.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.btn-white{background:white;color:#c8392b;padding:0.9rem 2.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:transform 0.2s,box-shadow 0.2s;display:inline-block;}.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,57,43,0.3);}
+.btn-ghost-white{color:white;text-decoration:none;font-size:0.85rem;font-weight:500;opacity:0.85;transition:opacity 0.2s;display:inline-block;padding:0.9rem 2.2rem;border:1.5px solid rgba(255,255,255,0.6);border-radius:100px;}.btn-ghost-white:hover{opacity:1;}
 
 /* FOOTER */
 footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
-.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem;}
-.footer-tagline{font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}.footer-desc{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;max-width:280px;}
+.footer-top{display:flex;flex-wrap:wrap;justify-content:space-evenly;align-items:flex-start;gap:2rem;margin-bottom:2rem;text-align:center;}
+.footer-tagline{font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}.footer-desc{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;max-width:320px;margin:0 auto;}
 .footer-col h5{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-light);margin-bottom:1.2rem;font-weight:600;}
 .footer-col a,.footer-col p{display:block;font-size:0.85rem;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:0.7rem;font-weight:300;transition:color 0.2s;}.footer-col a:hover{color:white;}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;}.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.25);}.footer-jp{font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.15);letter-spacing:0.1em;}
@@ -266,11 +266,11 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
 <footer>
   <div class="footer-top">
     <div>
-      <div><img src="kremi_logo_white_removebg.png" alt="Kremi" style="width:220px;height:auto;display:block;margin-bottom:0.5rem;"></div>
+      <div><img src="kremi_logo_white_removebg.png" alt="Kremi" style="width:150px;height:auto;display:block;margin:0 auto 0.5rem;"></div>
       <div class="footer-tagline">クレープと抹茶 · Japanese Crepes &amp; Matcha</div>
       <p class="footer-desc">Handcrafted Japanese crepes and ceremonial-grade matcha, inspired by the streets of Japan. Made fresh for you at *SCAPE, Singapore.</p>
     </div>
-    <div class="footer-col"><h5>Explore</h5><a href="index.html#menu">Menu</a><a href="index.html#matcha">Matcha &amp; Drinks</a><a href="our-story.html#visit">Visit Us</a><a href="our-story.html">Our Story</a></div>
+    <div class="footer-col"><h5>Explore</h5><a href="index.html#menu">Menu</a><a href="index.html#matcha">Matcha &amp; Drinks</a><a href="our-story.html#visit">Visit Us</a><a href="our-story.html">Our Story</a><a href="reviews.html">Reviews</a></div>
     <div class="footer-col"><h5>Events</h5><a href="events.html">Book an Event</a><a href="events.html#past-events">Past Events</a><a href="events.html#enquiry">Send Enquiry</a></div>
     <div class="footer-col"><h5>Visit</h5><p>2 Orchard Link, #02-32</p><p>*SCAPE, Singapore 237978</p><p style="margin-top:0.5rem;">Daily 12pm – 8.45pm</p><a href="mailto:kremicollective@gmail.com" style="margin-top:0.5rem;">kremicollective@gmail.com</a></div>
   </div>

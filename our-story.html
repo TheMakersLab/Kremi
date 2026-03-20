@@ -44,7 +44,7 @@ nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border
 .values-strip{background:var(--matcha);padding:5rem 6rem;}
 .values-inner{max-width:1200px;margin:0 auto;}
 .values-header{text-align:center;margin-bottom:4rem;}.values-header .section-label{justify-content:center;color:var(--matcha-pale);}.values-header .section-label::before{background:var(--matcha-pale);}.values-header .section-title{color:white;}
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+.values-manifesto{font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.7);font-style:italic;font-weight:300;max-width:580px;margin:0 auto 0;}.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;}
 .value-card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:18px;padding:2rem;}
 .value-icon{font-size:2rem;margin-bottom:1rem;display:block;}.value-title{font-family:'Shippori Mincho',serif;font-size:1.05rem;font-weight:700;color:white;margin-bottom:0.6rem;}.value-desc{font-size:0.83rem;line-height:1.7;color:rgba(255,255,255,0.65);font-weight:300;}
 /* VISIT */
@@ -58,8 +58,8 @@ nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border
 .social-row{display:flex;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;}.social-btn{display:flex;align-items:center;gap:0.5rem;padding:0.7rem 1.3rem;border-radius:100px;font-size:0.78rem;font-weight:600;text-decoration:none;transition:transform 0.2s;}.social-btn:hover{transform:translateY(-2px);}
 .social-btn.ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366);color:white;}.social-btn.tt{background:#010101;color:white;}
 footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
-.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem;}
-.footer-tagline{font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}.footer-desc{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;max-width:280px;}
+.footer-top{display:flex;flex-wrap:wrap;justify-content:space-evenly;align-items:flex-start;gap:2rem;margin-bottom:2rem;text-align:center;}
+.footer-tagline{font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}.footer-desc{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;max-width:320px;margin:0 auto;}
 .footer-col h5{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-light);margin-bottom:1.2rem;font-weight:600;}
 .footer-col a,.footer-col p{display:block;font-size:0.85rem;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:0.7rem;font-weight:300;transition:color 0.2s;}.footer-col a:hover{color:white;}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;}.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.25);}.footer-jp{font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.15);letter-spacing:0.1em;}
@@ -115,6 +115,7 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
     <div class="values-header reveal">
       <p class="section-label">What We Stand For</p>
       <h2 class="section-title">Made with intention,<br>served with care</h2>
+      <p class="values-manifesto">From the streets of Tokyo to Orchard Road. Every crepe is made by hand, fresh to order. We bring warmth, craft and attention to detail that defines Japanese food culture.</p>
     </div>
     <div class="values-grid">
       <div class="value-card reveal d1"><span class="value-icon">🌿</span><div class="value-title">Craft Over Convenience</div><div class="value-desc">Every crepe is made by hand, fresh to order. We don't cut corners — we chose the harder path because we believe you can taste the difference.</div></div>
@@ -151,11 +152,11 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
 <footer>
   <div class="footer-top">
     <div>
-      <div><img src="kremi_logo_white_removebg.png" alt="Kremi" style="width:220px;height:auto;display:block;margin-bottom:0.5rem;"></div>
+      <div><img src="kremi_logo_white_removebg.png" alt="Kremi" style="width:150px;height:auto;display:block;margin:0 auto 0.5rem;"></div>
       <div class="footer-tagline">クレープと抹茶 · Japanese Crepes &amp; Matcha</div>
       <p class="footer-desc">Handcrafted Japanese crepes and ceremonial-grade matcha, inspired by the streets of Japan. Made fresh for you at *SCAPE, Singapore.</p>
     </div>
-    <div class="footer-col"><h5>Explore</h5><a href="index.html#menu">Menu</a><a href="index.html#matcha">Matcha &amp; Drinks</a><a href="#visit">Visit Us</a><a href="reviews.html">Reviews</a></div>
+    <div class="footer-col"><h5>Explore</h5><a href="index.html#menu">Menu</a><a href="index.html#matcha">Matcha &amp; Drinks</a><a href="our-story.html#visit">Visit Us</a><a href="our-story.html">Our Story</a><a href="reviews.html">Reviews</a></div>
     <div class="footer-col"><h5>Events</h5><a href="events.html">Book an Event</a><a href="events.html#past-events">Past Events</a><a href="events.html#enquiry">Send Enquiry</a></div>
     <div class="footer-col"><h5>Visit</h5><p>2 Orchard Link, #02-32</p><p>*SCAPE, Singapore 237978</p><p style="margin-top:0.5rem;">Daily 12pm – 8.45pm</p><a href="mailto:kremicollective@gmail.com" style="margin-top:0.5rem;">kremicollective@gmail.com</a></div>
   </div>

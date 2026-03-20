@@ -13,7 +13,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--ink);overflow-x:hidden;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3.5rem;display:flex;align-items:center;justify-content:space-between;transition:background 0.4s;}
 nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(90,122,74,0.15);}
-.nav-logo{text-decoration:none;display:flex;align-items:center;}.nav-logo img{width:250px;height:80px;object-fit:contain;object-position:left center;display:block;filter:brightness(0) saturate(100%) invert(22%) sepia(68%) saturate(800%) hue-rotate(333deg) brightness(90%) contrast(95%);margin-left:1rem;}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}.nav-logo img{width:250px;height:80px;object-fit:contain;object-position:left center;display:block;filter:brightness(0) saturate(100%) invert(22%) sepia(68%) saturate(800%) hue-rotate(333deg) brightness(90%) contrast(95%);margin-left:-0.5rem;}
 .nav-links{display:flex;gap:2.5rem;list-style:none;}.nav-links a{font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;font-weight:500;transition:color 0.2s;}.nav-links a:hover{color:var(--red);}
 .nav-cta{background:var(--red);color:white !important;padding:0.55rem 1.4rem;border-radius:100px;}.nav-cta:hover{background:var(--red-warm) !important;}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}.nav-hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.3s;}
@@ -43,20 +43,24 @@ nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border
 .fan-tags{position:absolute;top:0;left:50%;transform:translateX(-50%);display:flex;gap:0.6rem;z-index:10;white-space:nowrap;}
 .fan-card{position:absolute;bottom:0;left:50%;width:260px;height:380px;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);transform-origin:bottom center;margin-left:-130px;transition:transform 0.55s cubic-bezier(0.23,1,0.32,1),box-shadow 0.55s ease;}
 .fan-card img{width:100%;height:100%;object-fit:cover;display:block;}
-.fan-ll{transform:rotate(-18deg);z-index:1;}.fan-l{transform:rotate(-7deg);z-index:2;}.fan-c{transform:rotate(4deg);z-index:4;}.fan-r{transform:rotate(14deg);z-index:3;}
-.fan-wrapper:hover .fan-ll{transform:rotate(-55deg);box-shadow:0 28px 70px rgba(0,0,0,0.18);}
-.fan-wrapper:hover .fan-l{transform:rotate(-20deg);box-shadow:0 28px 70px rgba(0,0,0,0.18);}
-.fan-wrapper:hover .fan-c{transform:rotate(8deg) translateY(-16px);box-shadow:0 36px 80px rgba(0,0,0,0.24);}
-.fan-wrapper:hover .fan-r{transform:rotate(42deg);box-shadow:0 28px 70px rgba(0,0,0,0.18);}
+.fan-ll{transform:rotate(-22deg);z-index:1;}.fan-l{transform:rotate(-11deg);z-index:2;}.fan-c{transform:rotate(0deg);z-index:5;}.fan-r{transform:rotate(11deg);z-index:3;}.fan-rr{transform:rotate(22deg);z-index:4;}
+.fan-wrapper:hover .fan-ll{transform:rotate(-58deg);box-shadow:0 28px 70px rgba(0,0,0,0.18);}
+.fan-wrapper:hover .fan-l{transform:rotate(-26deg);box-shadow:0 28px 70px rgba(0,0,0,0.18);}
+.fan-wrapper:hover .fan-c{transform:rotate(0deg) translateY(-16px);box-shadow:0 36px 80px rgba(0,0,0,0.24);}
+.fan-wrapper:hover .fan-r{transform:rotate(26deg);box-shadow:0 28px 70px rgba(0,0,0,0.18);}
+.fan-wrapper:hover .fan-rr{transform:rotate(58deg);box-shadow:0 28px 70px rgba(0,0,0,0.18);}
 .hero-tag{background:white;border-radius:100px;padding:0.5rem 1rem;font-size:0.7rem;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.12);display:inline-flex;align-items:center;gap:0.4rem;}
 .hero-tag.t-matcha{color:var(--matcha);border:1.5px solid var(--matcha-pale);}.hero-tag.t-red{color:var(--red);border:1.5px solid rgba(200,57,43,0.2);}
 .tag-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;}
 /* MARQUEE */
-.marquee-strip{background:var(--red);padding:0.85rem 0;overflow:hidden;white-space:nowrap;}
-.marquee-track{display:inline-flex;animation:marquee 22s linear infinite;}
-.marquee-item{display:inline-flex;align-items:center;gap:1rem;margin-right:3rem;color:white;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:500;}
-.marquee-item .sep{color:rgba(255,255,255,0.5);}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.feature-strip{background:var(--red);padding:1.1rem 6rem;}
+.feature-strip-inner{display:flex;align-items:center;justify-content:center;}
+.fs-item{padding:0 3rem;flex:1;text-align:center;}
+.fs-divider{width:1px;height:1.2rem;background:rgba(255,255,255,0.25);flex-shrink:0;}
+.fs-num{display:block;font-size:0.72rem;font-weight:700;color:white;letter-spacing:0.12em;text-transform:uppercase;font-family:'DM Sans',sans-serif;}
+.fs-label{display:block;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:400;margin-top:0.2rem;}
+@media(max-width:1024px){.feature-strip{padding:1rem 2rem;}.fs-item{padding:0 1.5rem;}}
+@media(max-width:640px){.feature-strip-inner{flex-wrap:wrap;gap:0.8rem;}.fs-divider{display:none;}.fs-item{flex:1 1 45%;}}
 /* MENU */
 .menu-section{background:var(--cream);padding:6rem 0 3rem;}
 .menu-header{text-align:center;max-width:600px;margin:0 auto 4rem;padding:0 2rem;}
@@ -91,9 +95,9 @@ nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border
 /* MATCHA */
 .matcha-section{background:var(--matcha);padding:7rem 6rem;position:relative;overflow:hidden;}
 .matcha-section::before{content:'抹茶';position:absolute;font-family:'Zen Kaku Gothic New',sans-serif;font-size:20rem;font-weight:700;color:rgba(255,255,255,0.04);right:-2rem;bottom:-3rem;line-height:1;pointer-events:none;}
-.matcha-top-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;margin-bottom:4rem;}
+.matcha-top-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;margin-bottom:4rem;position:relative;}
 .matcha-content .section-label{color:var(--matcha-pale);}.matcha-content .section-label::before{background:var(--matcha-pale);}.matcha-content .section-title{color:white;}.matcha-content .section-body{color:rgba(255,255,255,0.75);}
-.drinks-menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+.drinks-menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
 .matcha-latte-spotlight{position:relative;display:flex;flex-direction:column;align-items:center;gap:1.1rem;padding:1.5rem;}
 .ml-orb{position:absolute;border-radius:50%;filter:blur(40px);pointer-events:none;animation:ml-float 6s ease-in-out infinite;}
 .ml-orb1{width:180px;height:180px;background:rgba(90,122,74,0.35);top:-20px;right:-10px;}.ml-orb2{width:120px;height:120px;background:rgba(138,170,106,0.25);bottom:10px;left:-10px;animation-delay:2s;}.ml-orb3{width:80px;height:80px;background:rgba(245,201,122,0.2);top:40%;right:-30px;animation-delay:4s;}
@@ -106,14 +110,24 @@ nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border
 .ml-label-row{display:flex;align-items:center;justify-content:space-between;width:300px;margin-top:0.5rem;z-index:2;}.ml-label-name{font-family:'Shippori Mincho',serif;font-size:0.85rem;font-weight:700;color:white;}.ml-label-price{font-size:0.78rem;color:var(--matcha-pale);font-weight:600;}
 .hot-sale-badge{display:inline-flex;align-items:center;gap:0.3rem;background:linear-gradient(135deg,#ff6b35,#f7c948);color:white;font-size:0.55rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:0.18rem 0.55rem;border-radius:100px;margin-left:0.5rem;vertical-align:middle;box-shadow:0 2px 8px rgba(255,107,53,0.45);animation:hot-pulse 2s ease-in-out infinite;}
 @keyframes hot-pulse{0%,100%{box-shadow:0 2px 8px rgba(255,107,53,0.45);}50%{box-shadow:0 4px 16px rgba(255,107,53,0.75);}}
+@keyframes matcha-glow-pulse{0%,100%{box-shadow:0 30px 70px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.18),0 0 0 0 rgba(138,170,106,0);}50%{box-shadow:0 30px 70px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.18),0 0 50px 12px rgba(138,170,106,0.55),0 0 0 6px rgba(138,170,106,0.2);}}
+.matcha-glow-active{animation:matcha-glow-pulse 1.6s ease-in-out 3;}
+#matcha-arrow-svg{position:absolute;top:0;left:0;pointer-events:none;overflow:visible;z-index:10;}
+#matcha-arrow-path{fill:none;stroke:rgba(200,230,180,0.7);stroke-width:2;stroke-dasharray:6 5;stroke-linecap:round;}
 .drink-item-hot{background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);border-radius:10px;padding:0.65rem 0.7rem;margin:-0.65rem -0.7rem;}
+/* PANEL SWITCHER */
+.cs-tab-bar{display:flex;align-items:stretch;position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:1px solid rgba(255,255,255,0.08);}
+.cs-tab{flex:1;padding:1rem;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border:none;background:none;cursor:pointer;font-family:'DM Sans',sans-serif;color:rgba(255,255,255,0.4);border-bottom:2px solid transparent;transition:color 0.25s,border-color 0.25s;}
+.cs-tab.cs-tab-active{color:white;border-bottom-color:white;}
+.cs-tab:hover:not(.cs-tab-active){color:rgba(255,255,255,0.7);}
+.cs-panel-hidden{display:none!important;}
 /* FOOTER */
 footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
-.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem;}
-.footer-tagline{font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}.footer-desc{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;max-width:280px;}
+.footer-top{display:flex;flex-wrap:wrap;justify-content:space-evenly;align-items:flex-start;gap:2rem;margin-bottom:2rem;text-align:center;}
+.footer-tagline{font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}.footer-desc{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;max-width:320px;margin:0 auto;}
 .footer-col h5{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-light);margin-bottom:1.2rem;font-weight:600;}
 .footer-col a,.footer-col p{display:block;font-size:0.85rem;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:0.7rem;font-weight:300;transition:color 0.2s;}.footer-col a:hover{color:white;}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;}.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.25);}.footer-jp{font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.15);letter-spacing:0.1em;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:2rem;display:flex;flex-direction:column;align-items:center;gap:0.6rem;text-align:center;}.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.25);}.footer-jp{font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.15);letter-spacing:0.1em;}
 /* RESPONSIVE */
 @media(max-width:1024px){
   nav{padding:0.8rem 1.5rem;}.nav-links{display:none;}.nav-hamburger{display:flex;z-index:101;position:relative;}
@@ -127,9 +141,9 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
 }
 @media(max-width:640px){
   .nav-logo img{width:110px;height:auto;}
-  .hero{display:flex;flex-direction:column;}.hero-left{padding:5.5rem 1.5rem 2rem;order:1;}.hero-right{order:2;height:380px;min-height:380px;}
+  .hero{display:flex;flex-direction:column;}.hero-left{padding:5.5rem 1.5rem 2rem;order:1;}.hero-right{order:2;height:440px;min-height:440px;padding-bottom:3rem;}
   .hero-image-stack{padding:1rem;width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
-  .fan-wrapper{width:320px;height:340px;}.fan-card{width:175px;height:255px;margin-left:-87px;}
+  .fan-wrapper{width:320px;height:340px;margin:0 auto;}.fan-card{width:175px;height:255px;margin-left:-87px;}
   .hero-title{font-size:2.4rem;}.hero-desc{font-size:0.9rem;}.hero-actions{flex-direction:column;align-items:flex-start;gap:0.8rem;}
   .menu-section{padding:3rem 0 2rem;}.menu-feat{padding:0 1.5rem;}
   .matcha-section{padding:4rem 1.5rem;}.drinks-menu-grid{grid-template-columns:1fr;}
@@ -183,34 +197,27 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
         <div class="fan-card fan-l"><img src="cookie_and_cream_crepe.webp" alt="Cookie and Cream Crepe"></div>
         <div class="fan-card fan-r"><img src="matcha_crepe.webp" alt="Matcha Crepe"></div>
         <div class="fan-card fan-ll"><img src="spicy_noodle_crepe.webp" alt="Spicy Noodle Crepe"></div>
+        <div class="fan-card fan-rr"><img src="kremi-strawberry-matcha.png" alt="Strawberry Matcha"></div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="marquee-strip">
-  <div class="marquee-track">
-    <span class="marquee-item">Banana Pudding Matcha Brûlée <span class="sep">✦</span></span>
-    <span class="marquee-item">Mochi Strawberry <span class="sep">✦</span></span>
-    <span class="marquee-item">Mt. Buldak <span class="sep">✦</span></span>
-    <span class="marquee-item">Oreo Cream Cheese <span class="sep">✦</span></span>
-    <span class="marquee-item">Strawberry Nutella <span class="sep">✦</span></span>
-    <span class="marquee-item">Strawberry Matcha <span class="sep">✦</span></span>
-    <span class="marquee-item">Banana Cookie Butter <span class="sep">✦</span></span>
-    <span class="marquee-item">Choco <span class="sep">✦</span></span>
-    <span class="marquee-item">Spicy Tuna Mayo <span class="sep">✦</span></span>
-    <span class="marquee-item">Strawberry Cream Cheesecake <span class="sep">✦</span></span>
-    <span class="marquee-item">Banana Pudding Matcha Brûlée <span class="sep">✦</span></span>
-    <span class="marquee-item">Mochi Strawberry <span class="sep">✦</span></span>
-    <span class="marquee-item">Mt. Buldak <span class="sep">✦</span></span>
-    <span class="marquee-item">Oreo Cream Cheese <span class="sep">✦</span></span>
-    <span class="marquee-item">Strawberry Nutella <span class="sep">✦</span></span>
-    <span class="marquee-item">Strawberry Matcha <span class="sep">✦</span></span>
-    <span class="marquee-item">Banana Cookie Butter <span class="sep">✦</span></span>
-    <span class="marquee-item">Choco <span class="sep">✦</span></span>
-    <span class="marquee-item">Spicy Tuna Mayo <span class="sep">✦</span></span>
-    <span class="marquee-item">Strawberry Cream Cheesecake <span class="sep">✦</span></span>
+<div class="feature-strip">
+  <div class="feature-strip-inner">
+    <div class="fs-item"><span class="fs-num">10+</span><span class="fs-label">Crepe Flavours</span></div>
+    <div class="fs-divider"></div>
+    <div class="fs-item"><span class="fs-num">6.5g+</span><span class="fs-label">Matcha Per Cup</span></div>
+    <div class="fs-divider"></div>
+    <div class="fs-item"><span class="fs-num">Fresh Daily</span><span class="fs-label">Made to Order</span></div>
+    <div class="fs-divider"></div>
+    <div class="fs-item"><span class="fs-num">Ceremonial</span><span class="fs-label">Grade Matcha</span></div>
   </div>
+</div>
+
+<div class="cs-tab-bar" id="csTabBar">
+  <button class="cs-tab cs-tab-active" data-panel="menu" onclick="switchPanel('menu')">🥞 Crepes</button>
+  <button class="cs-tab" data-panel="matcha" onclick="switchPanel('matcha')">🍵 Matcha &amp; Drinks</button>
 </div>
 
 <section class="menu-section" id="menu">
@@ -227,10 +234,7 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
       <button class="tc-btn" onclick="tStep(1)" aria-label="Next"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
     </div>
   </div>
-  <div class="menu-feat">
-    <div class="feat-item reveal"><div class="feat-icon green">🌿</div><div class="feat-body"><h4>Made Fresh to Order</h4><p>Every crepe is made when you order — batter hits the griddle, fillings layered with care, delivered warm and soft every time.</p></div></div>
-    <div class="feat-item reveal d2"><div class="feat-icon red">🍓</div><div class="feat-body"><h4>Sweet &amp; Savoury</h4><p>From matcha brûlée to spicy buldak — our menu has something for every mood, whether you want a sweet treat or a proper bite.</p></div></div>
-  </div>
+  
 </section>
 
 <div class="menu-modal-overlay" id="menuModal" onclick="handleModalOverlayClick(event)">
@@ -250,43 +254,46 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
   </div>
 </div>
 
-<section class="matcha-section" id="matcha">
+<section class="matcha-section cs-panel-hidden" id="matcha">
   <div class="matcha-top-grid">
     <div class="matcha-content reveal">
-      <p class="section-label">Ceremonial Matcha</p>
-      <h2 class="section-title">Shizuoka<br>Ceremonial<br>Matcha</h2>
-      <p class="section-body">Premium first harvest matcha, sourced from Shizuoka, Japan — prized for its vivid colour, gentle umami sweetness and smooth, layered depth.</p>
-      <p class="section-body">The same ceremonial-grade matcha we use in every cup. Pure, unadulterated, and crafted to pair beautifully with our Japanese crepes.</p>
+      <p class="section-label">The Purest Cup</p>
+      <h2 class="section-title">Ceremonial<br>Matcha</h2>
+      <p class="section-body" style="font-weight:700;letter-spacing:0.04em;">✨ Vibrant. Smooth. Deep.</p>
+      <p class="section-body">Most matcha uses only <strong style="background:rgba(255,255,255,0.15);padding:0.1em 0.4em;border-radius:4px;color:#fff;">2g</strong> of powder. We believe in a richer experience. 🍵</p>
+      <p class="section-body" id="matcha-rich-desc">Each cup is crafted with a generous <strong style="background:var(--matcha, #6a9e5a);padding:0.1em 0.5em;border-radius:4px;color:#fff;font-size:1.05em;">6.5g – 7.5g</strong> of first-harvest matcha. This extra-rich dose gives you a bright green colour 💚, a gentle sweetness, and a smooth depth you can truly feel.</p>
     </div>
+    <svg id="matcha-arrow-svg" width="0" height="0">
+      <defs>
+        <marker id="matcha-arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="rgba(200,230,180,0.8)"/>
+        </marker>
+      </defs>
+      <path id="matcha-arrow-path"/>
+    </svg>
     <div class="matcha-latte-spotlight">
       <div class="ml-orb ml-orb1"></div><div class="ml-orb ml-orb2"></div><div class="ml-orb ml-orb3"></div>
       <div class="ml-kanji">抹茶</div>
       <div class="ml-glass-card">
-        <div class="ml-img-wrap"><img loading="lazy" src="kremimatchatin.png" alt="Kremi Matcha Tin" class="ml-img"></div>
+        <div class="ml-img-wrap"><img loading="lazy" src="kremi_s_matcha_latte.png" alt="Kremi Matcha Latte" class="ml-img"></div>
         <div class="ml-badge ml-badge-top"><span class="ml-badge-dot"></span>First Harvest</div>
-        <div class="ml-badge ml-badge-bottom"><span class="ml-badge-dot" style="background:#f5c97a;"></span>Shizuoka, Japan</div>
+        <div class="ml-badge ml-badge-bottom"><span class="ml-badge-dot" style="background:#f5c97a;"></span>Ceremonial Grade</div>
       </div>
-      <div class="ml-label-row"><span class="ml-label-name">Kremi Matcha Tin</span><span class="ml-label-price">Shizuoka, Japan</span></div>
+      <div class="ml-label-row"><span class="ml-label-name">Kremi Matcha Latte</span></div>
     </div>
   </div>
   <div class="reveal drinks-menu-grid">
     <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:1.6rem;">
-      <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-pale);font-weight:600;margin-bottom:1rem;">Matcha</div>
+      <div style="font-size:0.85rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-pale);font-weight:800;margin-bottom:1rem;">Matcha</div>
       <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);margin-bottom:1.2rem;line-height:1.6;">Oatmilk +$1.0 · Carrier +$0.2</div>
       <div style="display:flex;flex-direction:column;gap:1rem;">
-        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">🍵 Signature <span class="hot-sale-badge">🔥 Hot Sale</span></div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Floral, Nutty, Creamy</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$7.50</div></div>
-        <div class="drink-item-hot"><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">⭐ Rin Matcha Latte <span class="hot-sale-badge">🔥 Hot Sale</span></div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Multi-dimensional Umami Flavour</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$8.50</div></div>
+        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">🍵 Signature</div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Floral, Nutty, Creamy</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$7.50</div></div>
+        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">⭐ Rin Matcha Latte</div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Multi-dimensional Umami Flavour</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$8.50</div></div>
         <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">🌸 Ajisai Matcha Latte</div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Umami, Soybean, Pistachio</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$8.50</div></div>
       </div>
       <div style="margin-top:1.2rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);">
         <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.6rem;">Add-ons</div>
-        <div style="color:rgba(255,255,255,0.55);font-size:0.72rem;line-height:1.9;">Strawberry / Mango / Blueberry <span style="color:var(--matcha-pale);">+$1</span><br>Banana Pudding <span style="color:var(--matcha-pale);">+$2.50</span><br>Black Sesame Cold Foam <span style="color:var(--matcha-pale);">+$2.50</span><br>Sea Salt Cold Foam <span style="color:var(--matcha-pale);">+$2</span></div>
-      </div>
-    </div>
-    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:1.6rem;">
-      <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-pale);font-weight:600;margin-bottom:1rem;">Coffee</div>
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <div><div style="color:white;font-family:'Shippori Mincho',serif;font-size:0.9rem;font-weight:700;">☕ Mont Blanc</div><div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin:0.2rem 0;">Coffee, Cream, Orange &amp; Spice</div><div style="color:var(--matcha-pale);font-size:0.82rem;font-weight:600;">$7.50</div></div>
+        <div style="color:rgba(255,255,255,0.55);font-size:0.72rem;line-height:1.9;">Strawberry / Mango <span style="color:var(--matcha-pale);">+$1</span><br>Banana Pudding <span style="color:var(--matcha-pale);">+$2.50</span><br>Black Sesame Cold Foam <span style="color:var(--matcha-pale);">+$2.50</span><br>Sea Salt Cold Foam <span style="color:var(--matcha-pale);">+$2</span></div>
       </div>
     </div>
     <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:1.6rem;">
@@ -307,16 +314,16 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
   </div>
 </section>
 
-<div class="view-menu-strip reveal">
+<section class="view-menu-strip reveal" style="text-align:center;">
   <p>See our full Crepe &amp; Drinks menu</p>
   <button class="btn-view-menu" onclick="openMenuPDF('crepe')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>View Full Menu<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
   <p style="font-size:0.75rem;color:var(--matcha);opacity:0.75;margin-top:0.6rem;margin-bottom:0;">Crepe Menu &amp; Drinks Menu — switch between tabs</p>
-</div>
+</section>
 
 <footer>
   <div class="footer-top">
     <div>
-      <div><img src="kremi_logo_white_removebg.png" alt="Kremi" style="width:220px;height:auto;display:block;margin-bottom:0.5rem;"></div>
+      <div><img src="kremi_logo_white_removebg.png" alt="Kremi" style="width:150px;height:auto;display:block;margin:0 auto 0.5rem;"></div>
       <div class="footer-tagline">クレープと抹茶 · Japanese Crepes &amp; Matcha</div>
       <p class="footer-desc">Handcrafted Japanese crepes and ceremonial-grade matcha, inspired by the streets of Japan. Made fresh for you at *SCAPE, Singapore.</p>
     </div>
@@ -359,6 +366,92 @@ document.addEventListener('DOMContentLoaded',function(){tBuild();var h=document.
   window.addEventListener('pageshow',function(){h.classList.remove('open');m.classList.remove('open');document.body.style.overflow='';});}});
 var nav=document.getElementById('nav');
 window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60);});
+
+// Panel switcher
+var csCurrentPanel='menu';
+function switchPanel(panel){
+  csCurrentPanel=panel;
+  var isMenu=panel==='menu';
+  document.getElementById('menu').classList.toggle('cs-panel-hidden',!isMenu);
+  document.getElementById('matcha').classList.toggle('cs-panel-hidden',isMenu);
+  document.querySelectorAll('.cs-tab').forEach(function(tab){tab.classList.toggle('cs-tab-active',tab.dataset.panel===panel);});
+  var bar=document.getElementById('csTabBar');
+  if(bar){window.scrollTo({top:bar.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});}
+}
+// Swipe support
+(function(){
+  var sx=0,sy=0;
+  document.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+  document.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-sx;
+    var dy=e.changedTouches[0].clientY-sy;
+    if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>60){
+      if(dx<0&&csCurrentPanel==='menu')switchPanel('matcha');
+      else if(dx>0&&csCurrentPanel==='matcha')switchPanel('menu');
+    }
+  },{passive:true});
+})();
+
+// Matcha arrow animation
+(function(){
+  var hasAnimated=false;
+  function buildArrow(){
+    var para=document.getElementById('matcha-rich-desc');
+    var card=document.querySelector('.ml-glass-card');
+    var grid=document.querySelector('.matcha-top-grid');
+    var svg=document.getElementById('matcha-arrow-svg');
+    var path=document.getElementById('matcha-arrow-path');
+    if(!para||!card||!grid||!svg||!path)return;
+    if(window.innerWidth<=1024){svg.style.display='none';return;}
+    svg.style.display='block';
+    var gr=grid.getBoundingClientRect();
+    var pr=para.getBoundingClientRect();
+    var cr=card.getBoundingClientRect();
+    var x1=pr.right-gr.left;
+    var y1=pr.top+pr.height/2-gr.top;
+    var x2=cr.left-gr.left;
+    var y2=cr.top+cr.height*0.38-gr.top;
+    var dx=x2-x1;
+    var cx1=x1+dx*0.35; var cy1=y1+35;
+    var cx2=x1+dx*0.65; var cy2=y2-20;
+    svg.setAttribute('width',gr.width);
+    svg.setAttribute('height',gr.height);
+    svg.setAttribute('viewBox','0 0 '+gr.width+' '+gr.height);
+    path.setAttribute('d','M'+x1+','+y1+' C'+cx1+','+cy1+' '+cx2+','+cy2+' '+x2+','+y2);
+    path.style.transition='none';
+    var len=path.getTotalLength();
+    path.style.strokeDasharray=len+' '+len;
+    path.style.strokeDashoffset=len;
+    return len;
+  }
+  function animateArrow(){
+    var len=buildArrow();
+    if(!len)return;
+    var path=document.getElementById('matcha-arrow-path');
+    var card=document.querySelector('.ml-glass-card');
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        path.style.transition='stroke-dashoffset 1.4s cubic-bezier(0.4,0,0.2,1) 0.2s';
+        path.style.strokeDashoffset='0';
+      });
+    });
+    setTimeout(function(){
+      if(card){card.classList.add('matcha-glow-active');}
+    },1700);
+  }
+  var section=document.getElementById('matcha');
+  if(section&&'IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting&&!hasAnimated){hasAnimated=true;animateArrow();}
+      });
+    },{threshold:0.45});
+    obs.observe(section);
+  }
+  window.addEventListener('resize',function(){
+    if(hasAnimated)buildArrow();
+  });
+})();
 </script>
 </body>
 </html>

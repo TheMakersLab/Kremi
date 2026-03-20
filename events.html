@@ -108,8 +108,8 @@ nav.scrolled{background:rgba(250,246,239,0.96);backdrop-filter:blur(12px);border
 .success-msg{font-size:0.88rem;color:var(--ink-soft);line-height:1.6;font-weight:300;max-width:320px;}
 /* FOOTER */
 footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
-.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem;}
-.footer-tagline{font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}.footer-desc{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;max-width:280px;}
+.footer-top{display:flex;flex-wrap:wrap;justify-content:space-evenly;align-items:flex-start;gap:2rem;margin-bottom:2rem;text-align:center;}
+.footer-tagline{font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}.footer-desc{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;max-width:320px;margin:0 auto;}
 .footer-col h5{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--matcha-light);margin-bottom:1.2rem;font-weight:600;}
 .footer-col a,.footer-col p{display:block;font-size:0.85rem;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:0.7rem;font-weight:300;transition:color 0.2s;}.footer-col a:hover{color:white;}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;}.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.25);}.footer-jp{font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.15);letter-spacing:0.1em;}
@@ -169,21 +169,6 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
   </div>
 </section>
 
-<section class="how-section">
-  <div class="how-inner">
-    <div class="how-header">
-      <div class="reveal"><p class="section-label">The Process</p><h2 class="section-title">How it works</h2></div>
-      <div class="reveal d2"><p style="font-size:0.9rem;line-height:1.8;color:var(--ink-soft);font-weight:300;">From first enquiry to the last crepe — we keep things simple, clear, and delicious. Here's what to expect when you book with Kremi.</p></div>
-    </div>
-    <div class="how-steps">
-      <div class="how-step reveal d1"><div class="step-num">1</div><div class="step-title">Send an Enquiry</div><div class="step-desc">Fill in our form below with your event details — date, guest count, and what you're celebrating.</div></div>
-      <div class="how-step reveal d2"><div class="step-num">2</div><div class="step-title">We Get in Touch</div><div class="step-desc">Our team will reach out within 2 business days to discuss your event and what we can do for you.</div></div>
-      <div class="how-step reveal d3"><div class="step-num">3</div><div class="step-title">Confirm &amp; Plan</div><div class="step-desc">Once you're happy, we lock in the date and sort out all the setup details and menu choices together.</div></div>
-      <div class="how-step reveal d4"><div class="step-num">4</div><div class="step-title">Enjoy the Day</div><div class="step-desc">We arrive, set up, and serve fresh handcrafted crepes all event long. You just enjoy the celebration.</div></div>
-    </div>
-  </div>
-</section>
-
 <section class="cta-band">
   <h2>Ready to make it happen?</h2>
   <p>Send us an enquiry and let's plan something beautiful together — one crepe at a time.</p>
@@ -215,7 +200,7 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
             <div class="form-group"><label>Event Date <span class="req">*</span></label><input type="date" id="fdate"><span class="field-error" id="err-fdate"></span></div>
             <div class="form-group"><label>Budget (optional)</label><select id="fbudget"><option value="" disabled selected>Approximate budget</option><option>Under S$300</option><option>S$300 – S$600</option><option>S$600 – S$1,000</option><option>S$1,000+</option><option>Not sure yet</option></select></div>
           </div>
-          <div class="form-group"><label>Interested In</label><div class="checkbox-group"><label class="checkbox-item"><input type="checkbox"> Crepe Station</label><label class="checkbox-item"><input type="checkbox"> Matcha Drinks Bar</label><label class="checkbox-item"><label class="checkbox-item"><input type="checkbox"> Custom Menu</label><label class="checkbox-item"><input type="checkbox"> Others</label></div></div>
+          <div class="form-group"><label>Interested In</label><div class="checkbox-group"><label class="checkbox-item"><input type="checkbox"> Crepe Station</label><label class="checkbox-item"><input type="checkbox"> Matcha Drinks Bar</label><label class="checkbox-item"><input type="checkbox"> Custom Branding</label><label class="checkbox-item"><input type="checkbox"> Custom Menu</label><label class="checkbox-item"><input type="checkbox"> Not sure yet</label></div></div>
           <div class="form-group"><label>Tell us more about your event</label><textarea id="fmsg" placeholder="Any special requests, dietary requirements, theme, or anything else you'd like us to know..."></textarea></div>
           <button class="form-submit" onclick="submitForm()">Send Enquiry →</button>
           <p class="form-note">We'll reply within 2 business days.</p>
@@ -234,12 +219,12 @@ footer{background:var(--ink);color:white;padding:5rem 6rem 3rem;}
 <footer>
   <div class="footer-top">
     <div>
-      <div><img src="kremi_logo_white_removebg.png" alt="Kremi" style="width:220px;height:auto;display:block;margin-bottom:0.5rem;"></div>
+      <div><img src="kremi_logo_white_removebg.png" alt="Kremi" style="width:150px;height:auto;display:block;margin:0 auto 0.5rem;"></div>
       <div class="footer-tagline">クレープと抹茶 · Japanese Crepes &amp; Matcha</div>
       <p class="footer-desc">Handcrafted Japanese crepes and ceremonial-grade matcha, inspired by the streets of Japan. Made fresh for you at *SCAPE, Singapore.</p>
     </div>
     <div class="footer-col"><h5>Explore</h5><a href="index.html#menu">Menu</a><a href="index.html#matcha">Matcha &amp; Drinks</a><a href="our-story.html#visit">Visit Us</a><a href="our-story.html">Our Story</a><a href="reviews.html">Reviews</a></div>
-    <div class="footer-col"><h5>Events</h5><a href="#events">Book an Event</a><a href="#past-events">Past Events</a><a href="#enquiry">Send Enquiry</a></div>
+    <div class="footer-col"><h5>Events</h5><a href="events.html">Book an Event</a><a href="events.html#past-events">Past Events</a><a href="events.html#enquiry">Send Enquiry</a></div>
     <div class="footer-col"><h5>Visit</h5><p>2 Orchard Link, #02-32</p><p>*SCAPE, Singapore 237978</p><p style="margin-top:0.5rem;">Daily 12pm – 8.45pm</p><a href="mailto:kremicollective@gmail.com" style="margin-top:0.5rem;">kremicollective@gmail.com</a></div>
   </div>
   <div class="footer-bottom">
